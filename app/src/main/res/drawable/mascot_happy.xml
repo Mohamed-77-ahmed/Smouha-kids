@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mascot, happy (empty state, the "start again" moment). A capsule with a face in the palette
+     (mascot_* in colors.xml); the same body in every expression (CLAUDE.md 9). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <!-- Arms down, a little out. -->
+    <path
+        android:pathData="M31,72 Q21,78 22,90"
+        android:strokeColor="@color/mascot_line"
+        android:strokeLineCap="round"
+        android:strokeWidth="4" />
+    <path
+        android:pathData="M89,72 Q99,78 98,90"
+        android:strokeColor="@color/mascot_line"
+        android:strokeLineCap="round"
+        android:strokeWidth="4" />
+    <!-- Body: light top half, green bottom half, one outline. -->
+    <path
+        android:fillColor="@color/mascot_top"
+        android:pathData="M30,62 L30,36 A30,30 0 0 1 90,36 L90,62 Z" />
+    <path
+        android:fillColor="@color/mascot_bottom"
+        android:pathData="M30,62 L90,62 L90,84 A30,30 0 0 1 30,84 Z" />
+    <path
+        android:pathData="M80,70 L80,84"
+        android:strokeAlpha="0.6"
+        android:strokeColor="@color/mascot_top"
+        android:strokeLineCap="round"
+        android:strokeWidth="4" />
+    <path
+        android:pathData="M30,62 L90,62"
+        android:strokeColor="@color/mascot_line"
+        android:strokeWidth="3" />
+    <path
+        android:pathData="M30,36 A30,30 0 0 1 90,36 L90,84 A30,30 0 0 1 30,84 Z"
+        android:strokeColor="@color/mascot_line"
+        android:strokeLineJoin="round"
+        android:strokeWidth="4" />
+    <!-- Face: round eyes, cheeks, smile. -->
+    <path
+        android:fillColor="@color/mascot_cheek"
+        android:pathData="M38,46 a5,4 0 1 0 10,0 a5,4 0 1 0 -10,0 Z M72,46 a5,4 0 1 0 10,0 a5,4 0 1 0 -10,0 Z" />
+    <path
+        android:fillColor="@color/mascot_line"
+        android:pathData="M45,35 a4.5,4.5 0 1 0 9,0 a4.5,4.5 0 1 0 -9,0 Z M66,35 a4.5,4.5 0 1 0 9,0 a4.5,4.5 0 1 0 -9,0 Z" />
+    <path
+        android:pathData="M51,46 Q60,54 69,46"
+        android:strokeColor="@color/mascot_line"
+        android:strokeLineCap="round"
+        android:strokeWidth="3.5" />
+</vector>

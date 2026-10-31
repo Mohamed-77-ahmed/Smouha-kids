@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Palette v2 "Koko" (dark). Same token names as values/colors.xml; lighter tones carry text, the
+     containers are deep tones with light text, surfaces a dark sky-tinted navy. -->
+<resources>
+    <color name="primary">#FFB37A</color>
+    <color name="on_primary">#4A1F00</color>
+    <color name="primary_container">#7A3300</color>
+    <color name="on_primary_container">#FFDCC4</color>
+
+    <color name="secondary">#F6C547</color>
+    <color name="on_secondary">#3B2800</color>
+    <color name="secondary_container">#574000</color>
+    <color name="on_secondary_container">#FFE6A6</color>
+
+    <color name="tertiary">#82D2EC</color>
+    <color name="on_tertiary">#003546</color>
+    <color name="tertiary_container">#0B4A61</color>
+    <color name="on_tertiary_container">#CDEFFA</color>
+
+    <color name="background">#0F1A21</color>
+    <color name="on_background">#EFEAE3</color>
+    <color name="surface">#0F1A21</color>
+    <color name="on_surface">#EFEAE3</color>
+    <color name="surface_variant">#2B3A44</color>
+    <color name="on_surface_variant">#C6D0D7</color>
+    <color name="outline">#8F9AA3</color>
+    <color name="surface_lowest">#0A1319</color>
+    <color name="surface_low">#131F27</color>
+    <color name="surface_container">#17242D</color>
+    <color name="surface_high">#1D2B35</color>
+    <color name="surface_highest">#24343F</color>
+
+    <color name="error">#FCA5A5</color>
+    <color name="on_error">#450A0A</color>
+    <color name="error_container">#7F1D1D</color>
+    <color name="on_error_container">#FEE2E2</color>
+    <color name="warning">#FCD34D</color>
+    <color name="warning_container">#3D2E05</color>
+    <color name="on_warning_container">#FFE7A3</color>
+    <color name="success">#86EFAC</color>
+
+    <color name="points">#82D2EC</color>
+    <color name="streak">#FCA5A5</color>
+
+    <!-- Deep sky blue, through dark navy, to deep gold, so white text stays readable everywhere. -->
+    <color name="gradient_start">#0B5577</color>
+    <color name="gradient_center">#1C2E3D</color>
+    <color name="gradient_end">#6B4A0E</color>
+    <color name="on_gradient">#FFFFFF</color>
+    <color name="gradient_scrim_start">#E60B5577</color>
+    <color name="gradient_scrim_center">#E61C2E3D</color>
+    <color name="gradient_scrim_end">#E66B4A0E</color>
+    <color name="glass">#26FFFFFF</color>
+    <color name="progress_on_gradient">#FFB37A</color>
+
+    <color name="shadow_soft">#000000</color>
+</resources>

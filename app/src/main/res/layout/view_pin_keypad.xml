@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The PIN keypad: always left to right with Western digits 0-9, also in Arabic (CLAUDE.md 9).
+     Digit labels are set from code. Delete, 0 and OK on the last row. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:layoutDirection="ltr"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/PillPals.PinKeyRow">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key1"
+            style="@style/Widget.PillPals.PinKey" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key2"
+            style="@style/Widget.PillPals.PinKey" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key3"
+            style="@style/Widget.PillPals.PinKey" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/PillPals.PinKeyRow">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key4"
+            style="@style/Widget.PillPals.PinKey" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key5"
+            style="@style/Widget.PillPals.PinKey" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key6"
+            style="@style/Widget.PillPals.PinKey" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/PillPals.PinKeyRow">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key7"
+            style="@style/Widget.PillPals.PinKey" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key8"
+            style="@style/Widget.PillPals.PinKey" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key9"
+            style="@style/Widget.PillPals.PinKey" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/PillPals.PinKeyRow">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/keyDelete"
+            style="@style/Widget.PillPals.PinKey.Delete"
+            android:contentDescription="@string/pin_key_delete" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/key0"
+            style="@style/Widget.PillPals.PinKey" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/keyOk"
+            style="@style/Widget.PillPals.PinKey.Ok"
+            android:contentDescription="@string/pin_key_ok" />
+    </LinearLayout>
+</LinearLayout>

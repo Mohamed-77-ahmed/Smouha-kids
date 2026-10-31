@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A settings warning row (palette v2): the amber box with a 2dp border, so a warning never looks
+     like the orange section titles. The text uses on_warning_container, the icon ic_warning. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/warning_container" />
+    <stroke
+        android:width="2dp"
+        android:color="@color/warning" />
+    <corners android:radius="16dp" />
+</shape>

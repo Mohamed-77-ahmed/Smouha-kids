@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Celebration backdrop: the app gradient (sky blue, cream, soft yellow), slightly see-through over the home screen. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:angle="315"
+        android:centerColor="@color/gradient_scrim_center"
+        android:endColor="@color/gradient_scrim_end"
+        android:startColor="@color/gradient_scrim_start" />
+</shape>

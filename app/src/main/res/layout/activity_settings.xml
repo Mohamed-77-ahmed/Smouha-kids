@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.SettingsActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationContentDescription="@string/back"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:title="@string/settings_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingBottom="32dp">
+
+            <TextView
+                style="@style/SettingsSection"
+                android:layout_marginTop="8dp"
+                android:text="@string/section_language" />
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/languageGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:selectionRequired="true"
+                android:orientation="vertical"
+                app:singleSelection="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/arabicButton"
+                    style="@style/Widget.PillPals.Button.Outlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="56dp"
+                    android:text="@string/language_arabic" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/englishButton"
+                    style="@style/Widget.PillPals.Button.Outlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="56dp"
+                    android:text="@string/language_english" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <TextView
+                style="@style/SettingsSection"
+                android:text="@string/section_pin" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/requirePinSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/require_pin"
+                android:textAppearance="?attr/textAppearanceBodyLarge" />
+
+            <TextView
+                style="@style/SettingsBody"
+                android:text="@string/require_pin_desc" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/changePinButton"
+                style="@style/Widget.PillPals.Button.Outlined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/change_pin"
+                app:icon="@drawable/ic_lock" />
+
+            <TextView
+                style="@style/SettingsSection"
+                android:text="@string/section_family" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/manageButton"
+                style="@style/Widget.PillPals.Button.Tonal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/manage_button" />
+
+            <TextView
+                style="@style/SettingsSection"
+                android:text="@string/section_reminders" />
+
+            <TextView
+                android:id="@+id/notificationsStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceBodyLarge"
+                tools:text="@string/notifications_on" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/notificationsButton"
+                style="@style/Widget.PillPals.Button.Tonal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/turn_on_notifications" />
+
+            <TextView
+                android:id="@+id/exactStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textAppearance="?attr/textAppearanceBodyLarge"
+                tools:text="@string/exact_on" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/exactButton"
+                style="@style/Widget.PillPals.Button.Tonal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/allow_exact" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/alarmSoundSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:minHeight="48dp"
+                android:text="@string/alarm_sound"
+                android:textAppearance="?attr/textAppearanceBodyLarge" />
+
+            <TextView
+                style="@style/SettingsBody"
+                android:text="@string/alarm_sound_desc" />
+
+            <TextView
+                android:id="@+id/silentNote"
+                style="@style/SettingsBody"
+                android:layout_marginTop="4dp"
+                android:text="@string/sound_on_silent_note" />
+
+            <!-- Read-only sound checks (CLAUDE.md 7); the buttons open the phone's own settings. -->
+            <TextView
+                android:id="@+id/alarmVolumeStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textAppearance="?attr/textAppearanceBodyLarge"
+                tools:text="@string/alarm_volume_zero" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/soundSettingsButton"
+                style="@style/Widget.PillPals.Button.Tonal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sound_settings_button" />
+
+            <TextView
+                android:id="@+id/dndStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textAppearance="?attr/textAppearanceBodyLarge"
+                tools:text="@string/dnd_off" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/dndSettingsButton"
+                style="@style/Widget.PillPals.Button.Tonal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dnd_settings_button" />
+
+            <TextView
+                style="@style/SettingsBody"
+                android:layout_marginTop="12dp"
+                android:text="@string/battery_hint" />
+
+            <TextView
+                android:id="@+id/batteryStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="?attr/textAppearanceBodyLarge"
+                tools:text="@string/battery_optimized" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/batteryButton"
+                style="@style/Widget.PillPals.Button.Tonal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/battery_button" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/testButton"
+                style="@style/Widget.PillPals.Button.Outlined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/test_reminder"
+                app:icon="@drawable/ic_alarm" />
+
+            <!-- The reward's short sound (batch 6, R3), PIN-gated like the alarm sound. -->
+            <TextView
+                style="@style/SettingsSection"
+                android:text="@string/section_rewards" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/celebrationSoundSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/celebration_sound"
+                android:textAppearance="?attr/textAppearanceBodyLarge" />
+
+            <TextView
+                style="@style/SettingsBody"
+                android:text="@string/celebration_sound_desc" />
+
+            <TextView
+                style="@style/SettingsSection"
+                android:text="@string/section_erase" />
+
+            <TextView
+                style="@style/SettingsBody"
+                android:text="@string/erase_desc" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/eraseButton"
+                style="@style/Widget.PillPals.Button.Outlined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/erase_button"
+                android:textColor="?attr/colorError"
+                app:icon="@drawable/ic_delete"
+                app:iconTint="?attr/colorError" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/aboutButton"
+                style="@style/Widget.PillPals.Button.Tonal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/about_title" />
+
+            <TextView
+                android:id="@+id/versionText"
+                style="@style/SettingsBody"
+                android:layout_marginTop="12dp"
+                tools:text="@string/app_version" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Reward and streak-broken overlay. Tap anywhere to close; it also closes by itself. It is
+     included over the home screen, so its dimmed backdrop has to paint (Overdraw is intended). -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/overlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_celebration"
+    tools:ignore="Overdraw"
+    android:clickable="true"
+    android:elevation="24dp"
+    android:focusable="true"
+    android:visibility="gone">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginVertical="24dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="@color/surface_lowest"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <!-- CHILD and TEEN reward: the celebration avatar, a rounded picture with its own
+                         background (batch 6, R3), springing in. -->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/avatarArt"
+                        android:layout_width="@dimen/avatar_size"
+                        android:layout_height="@dimen/avatar_size"
+                        android:contentDescription="@string/celebration_avatar_desc"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/avatar_celebration"
+                        android:visibility="gone"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearance.PillPals.Avatar" />
+
+                    <!-- CHILD streak ended: the vector mascot (decorative; the title says it all). -->
+                    <ImageView
+                        android:id="@+id/mascotArt"
+                        android:layout_width="@dimen/mascot_size"
+                        android:layout_height="@dimen/mascot_size"
+                        android:importantForAccessibility="no"
+                        android:visibility="gone"
+                        tools:src="@drawable/mascot_sleepy" />
+
+                    <!-- TEEN and ADULT streak ended: a small emoji badge. -->
+                    <TextView
+                        android:id="@+id/mascot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="72sp"
+                        tools:text="🎉" />
+
+                    <com.example.tracker.ui.CheckmarkView
+                        android:id="@+id/checkmark"
+                        android:layout_width="88dp"
+                        android:layout_height="88dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:textColor="?attr/colorPrimary"
+                        android:textDirection="locale"
+                        android:textSize="26sp"
+                        android:textStyle="bold"
+                        tools:text="Super star!" />
+
+                    <TextView
+                        android:id="@+id/subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:textAppearance="?attr/textAppearanceBodyLarge"
+                        android:textDirection="locale"
+                        tools:text="Yasmin took Panadol" />
+
+                    <TextView
+                        android:id="@+id/points"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:textColor="@color/points"
+                        android:textSize="32sp"
+                        android:textStyle="bold"
+                        tools:text="+15 points" />
+
+                    <TextView
+                        android:id="@+id/details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:lineSpacingExtra="4dp"
+                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                        android:textDirection="locale"
+                        tools:text="Pill taken +10" />
+
+                    <TextView
+                        android:id="@+id/streak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:textColor="@color/streak"
+                        android:textDirection="locale"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:text="4 days in a row" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/close"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:minHeight="56dp"
+                        android:textSize="18sp"
+                        tools:text="Yay!" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </FrameLayout>
+    </ScrollView>
+
+    <!-- Above the card so confetti flies over it; it never takes touches. -->
+    <com.example.tracker.ui.ConfettiView
+        android:id="@+id/confetti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="16dp" />
+</FrameLayout>

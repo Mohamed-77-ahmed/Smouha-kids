@@ -1,0 +1,65 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Release signing: never commit the keystore or its passwords (docs/RELEASE.md)
+keystore.properties
+*.jks
+*.keystore
+
+# Build output of every Gradle build in the project (the app, scripts/qr) and Kotlin's cache
+build/
+.kotlin/
+
+# Evidence (screenshots, UI and DB dumps from the emulators, the phone diagnosis) stays on this computer;
+# PROGRESS.md and FINAL_REPORT.md name the files. The helper scripts in docs/evidence/tools are code
+# (used by scripts/ and the suite) and stay in the repo.
+/docs/evidence/*
+!/docs/evidence/tools/
+
+# Device dumps
+*.hprof
+bugreport*.zip
+window_dump.xml
+*.logcat
+
+# The Drive links of this upload (dist/DRIVE.md); kept on this computer
+/dist/link.txt
+
+# The real names the scan looks for (scripts/scan-names.ps1); never published
+/scripts/scan-names.txt
+
+# The internal working plan (it names the people to ask); stays on this computer. Delete these two lines
+# to publish it after removing the names.
+/docs/final-plan.md
+
+# Android Studio: the device picked to run on (a local AVD path or a phone's serial)
+/.idea/deploymentTargetSelector.xml
+
+# GitHub token (batch 7, CLAUDE.md 2 "GitHub access"): a file or a folder, never committed
+kh.env
+kh.env/
+*.env
+
+# The Drive folders (rebuilt by scripts/build-dist.ps1); the APK and the PDFs go to a draft GitHub release
+/dist/
+
+# The doctor's raw originals in the project root; design/brand/ holds their exact copies (source of truth)
+/*.jpeg
+/*.jpg
+/*.png
+/*.mp4
+/*.mpeg
+/*.mp3

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Background layer of the launcher icon: the sky blue of koko.jpg, sampled from the top and bottom rows
+     of the rooster's crop (scripts/make-brand-assets.ps1), top to bottom, so the crop's faded border
+     disappears into it. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:angle="270"
+        android:endColor="@color/koko_icon_bg_bottom"
+        android:startColor="@color/koko_icon_bg_top" />
+</shape>

@@ -1,0 +1,116 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <!--
+        Material 3, palette v2 "Koko" (colors.xml / values-night/colors.xml, docs/palette-v2.md). Follows
+        the system dark mode as before. Dynamic color is not used, so the palette is always ours.
+    -->
+    <style name="Base.Theme.Tracker" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorPrimaryContainer">@color/primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/on_primary_container</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+        <item name="colorSecondaryContainer">@color/secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/on_secondary_container</item>
+        <item name="colorTertiary">@color/tertiary</item>
+        <item name="colorOnTertiary">@color/on_tertiary</item>
+        <item name="colorTertiaryContainer">@color/tertiary_container</item>
+        <item name="colorOnTertiaryContainer">@color/on_tertiary_container</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorOnBackground">@color/on_background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/on_surface_variant</item>
+        <item name="colorOutline">@color/outline</item>
+        <item name="colorSurfaceContainerLowest">@color/surface_lowest</item>
+        <item name="colorSurfaceContainerLow">@color/surface_low</item>
+        <item name="colorSurfaceContainer">@color/surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/surface_high</item>
+        <item name="colorSurfaceContainerHighest">@color/surface_highest</item>
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/on_error</item>
+        <item name="colorErrorContainer">@color/error_container</item>
+        <item name="colorOnErrorContainer">@color/on_error_container</item>
+        <item name="android:windowAnimationStyle">@style/PillPals.FadeThrough</item>
+        <!-- The PIN sheet and the dialogs share surface, 28dp corners and title type (styles_pin.xml). -->
+        <item name="bottomSheetDialogTheme">@style/ThemeOverlay.PillPals.BottomSheetDialog</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.PillPals.Dialog</item>
+        <!-- Child-friendly shapes (styles_shapes.xml): 56dp pill buttons, 28dp cards, soft shadows. -->
+        <item name="materialButtonStyle">@style/Widget.PillPals.Button</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.PillPals.Button.Outlined</item>
+        <item name="materialCardViewStyle">@style/Widget.PillPals.Card</item>
+    </style>
+
+    <style name="Theme.Tracker" parent="Base.Theme.Tracker" />
+
+    <!-- Launch screen (androidx core-splashscreen): the Koko rooster on the sky blue of its picture, then
+         the app theme. -->
+    <style name="Theme.Tracker.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/koko_sky</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <item name="postSplashScreenTheme">@style/Theme.Tracker</item>
+    </style>
+
+    <!-- Fade-through between screens (fade and a slight scale). Follows the system animation scale. -->
+    <style name="PillPals.FadeThrough" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/fade_through_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/fade_through_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/fade_through_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/fade_through_exit</item>
+    </style>
+
+    <style name="StatValue">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/on_gradient</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="StatLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/on_gradient</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="StatBox">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/bg_glass</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:paddingHorizontal">6dp</item>
+    </style>
+
+    <style name="SettingsSection">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textAppearance">?attr/textAppearanceTitleSmall</item>
+        <item name="android:textColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="FormError">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textAppearance">?attr/textAppearanceBodyMedium</item>
+        <item name="android:textColor">?attr/colorError</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="SettingsBody">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">?attr/textAppearanceBodyMedium</item>
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+    </style>
+</resources>

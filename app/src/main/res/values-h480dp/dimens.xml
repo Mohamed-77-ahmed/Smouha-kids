@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pin_key_size">56dp</dimen>
+    <dimen name="pin_key_gap">8dp</dimen>
+    <dimen name="pin_badge_size">56dp</dimen>
+</resources>

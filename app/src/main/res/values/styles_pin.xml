@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- PIN sheet (CLAUDE.md 8 and 9): large round keys, 28dp top corners, and the dialog look that the
+     other dialogs share with it. -->
+<resources>
+
+    <style name="ShapeAppearance.PillPals.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="ShapeAppearance.PillPals.SheetTop" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">28dp</item>
+        <item name="cornerSizeTopRight">28dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <!-- A digit key. Digits shrink to fit at large font scales instead of being cut. -->
+    <style name="Widget.PillPals.PinKey" parent="Widget.Material3.Button.TonalButton">
+        <item name="android:layout_width">@dimen/pin_key_size</item>
+        <item name="android:layout_height">@dimen/pin_key_size</item>
+        <item name="android:layout_marginStart">@dimen/pin_key_gap</item>
+        <item name="android:layout_marginEnd">@dimen/pin_key_gap</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadlineSmall</item>
+        <item name="autoSizeTextType">uniform</item>
+        <item name="autoSizeMinTextSize">12sp</item>
+        <item name="autoSizeMaxTextSize">28sp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.PillPals.Circle</item>
+    </style>
+
+    <!-- Backspace: an icon key without a fill. -->
+    <style name="Widget.PillPals.PinKey.Delete" parent="Widget.Material3.Button.TextButton">
+        <item name="android:layout_width">@dimen/pin_key_size</item>
+        <item name="android:layout_height">@dimen/pin_key_size</item>
+        <item name="android:layout_marginStart">@dimen/pin_key_gap</item>
+        <item name="android:layout_marginEnd">@dimen/pin_key_gap</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="icon">@drawable/ic_backspace</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">0dp</item>
+        <item name="iconSize">28dp</item>
+        <item name="iconTint">?attr/colorOnSurfaceVariant</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.PillPals.Circle</item>
+    </style>
+
+    <!-- OK: the filled primary key with a check mark. -->
+    <style name="Widget.PillPals.PinKey.Ok" parent="Widget.Material3.Button">
+        <item name="android:layout_width">@dimen/pin_key_size</item>
+        <item name="android:layout_height">@dimen/pin_key_size</item>
+        <item name="android:layout_marginStart">@dimen/pin_key_gap</item>
+        <item name="android:layout_marginEnd">@dimen/pin_key_gap</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="icon">@drawable/ic_check</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">0dp</item>
+        <item name="iconSize">28dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.PillPals.Circle</item>
+    </style>
+
+    <!-- Not baseline aligned: the icon-only keys (delete, OK) would be pushed down and cut. -->
+    <style name="PillPals.PinKeyRow" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/pin_key_gap</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:baselineAligned">false</item>
+    </style>
+
+    <!-- Modal bottom sheet: 28dp top corners on the low surface container, like every dialog. -->
+    <style name="Widget.PillPals.BottomSheet" parent="Widget.Material3.BottomSheet.Modal">
+        <item name="backgroundTint">?attr/colorSurfaceContainerLow</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.PillPals.SheetTop</item>
+    </style>
+
+    <style name="ThemeOverlay.PillPals.BottomSheetDialog" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/Widget.PillPals.BottomSheet</item>
+    </style>
+
+    <!-- Patient, erase and yes/no dialogs: the sheet's surface, corners and title type. -->
+    <style name="ThemeOverlay.PillPals.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="alertDialogStyle">@style/PillPals.AlertDialog</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/PillPals.DialogTitle</item>
+    </style>
+
+    <style name="PillPals.AlertDialog" parent="MaterialAlertDialog.Material3">
+        <item name="backgroundTint">?attr/colorSurfaceContainerLow</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.PillPals.Dialog</item>
+    </style>
+
+    <style name="ShapeAppearance.PillPals.Dialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">28dp</item>
+    </style>
+
+    <style name="PillPals.DialogTitle" parent="MaterialAlertDialog.Material3.Title.Text">
+        <item name="android:textAppearance">?attr/textAppearanceTitleLarge</item>
+    </style>
+</resources>

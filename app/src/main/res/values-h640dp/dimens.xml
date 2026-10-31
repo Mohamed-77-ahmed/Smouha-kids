@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pin_key_size">72dp</dimen>
+    <dimen name="pin_key_gap">14dp</dimen>
+    <dimen name="pin_badge_size">64dp</dimen>
+    <dimen name="mascot_size">112dp</dimen>
+    <dimen name="avatar_size">128dp</dimen>
+    <dimen name="onboarding_logo_size">128dp</dimen>
+</resources>

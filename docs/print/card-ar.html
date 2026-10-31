@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>كارت التثبيت</title>
+<link rel="stylesheet" href="print.css">
+<style>
+  /* A5 quick-start card, one page (scripts/make-card.ps1 puts the QR code in {{QR}}). */
+  @page { size: A5; margin: 8mm 9mm; }
+  body { font-size: 12.5pt; line-height: 1.45; }
+  .head { text-align: center; }
+  .head h1 { font-size: 22pt; margin: 0; }
+  .head img { width: 17mm; height: 17mm; border-radius: 4mm; display: block; margin: 0 auto 1mm; }
+  .head p { margin: 0.5mm 0 0; color: #374151; font-size: 11.5pt; }
+  .qr { width: 52mm; height: 52mm; margin: 4mm auto 1mm; }
+  .qr svg { width: 100%; height: 100%; display: block; }
+  .qr .placeholder { width: 52mm; height: 52mm; font-size: 10pt; }
+  .scan { text-align: center; font-weight: 700; color: #A84A0A; margin: 0 0 3mm; }
+  ol.four { list-style: none; padding: 0; margin: 0; counter-reset: s; }
+  ol.four li { counter-increment: s; display: flex; gap: 2.5mm; align-items: flex-start; margin: 0 0 2.2mm; }
+  ol.four li::before { content: counter(s); flex: none; width: 7.5mm; height: 7.5mm; border-radius: 50%; background: #A84A0A; color: #fff; font-weight: 700; font-size: 11.5pt; line-height: 7.5mm; text-align: center; }
+  .foot { border-top: 0.4mm solid #d1d5db; margin-top: 3mm; padding-top: 2mm; font-size: 10pt; color: #374151; }
+  .draft { text-align: center; font-size: 9.5pt; color: #b45309; font-weight: 700; margin: 0 0 1mm; }
+</style>
+</head>
+<body>
+{{DRAFT}}
+<div class="head">
+  <img src="img/koko-icon.png" alt="">
+  <h1>كوكو دوا</h1>
+  <p>تذكير بمواعيد أدوية الأطفال، لموبايلات أندرويد</p>
+</div>
+<div class="qr">{{QR}}</div>
+<p class="scan">امسحوا الكود بكاميرا الموبايل</p>
+<ol class="four">
+  <li><span>افتحوا الرابط ونزّلوا ملف التطبيق. لو ظهر تحذير، اضغطوا «تنزيل على أي حال».</span></li>
+  <li><span>افتحوا الملف، واسمحوا بالتثبيت من المصدر ده، وبعدين اضغطوا «تثبيت».</span></li>
+  <li><span>لو ظهرت رسالة <bdi>Play Protect</bdi>، اضغطوا «تفاصيل أكتر» ثم «التثبيت على أي حال».</span></li>
+  <li><span>افتحوا التطبيق: اختاروا اللغة، واعملوا رقم سري للأهل، وضيفوا أول دوا.</span></li>
+</ol>
+<p class="foot">للأندرويد بس، ومفيش نسخة للآيفون. التطبيق للتذكير بس، ومش بيدي نصايح طبية. الشرح الكامل في ملفات «طريقة التثبيت» و«طريقة الاستخدام». للمساعدة: <span class="fill">&lt;TO BE FILLED&gt;</span></p>
+</body>
+</html>

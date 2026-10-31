@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- PIN keypad (CLAUDE.md 9): the keys grow with the height that is left, so the whole keypad fits.
+         This file: under 480dp (small phones, landscape). values-h480dp and values-h640dp: larger. -->
+    <dimen name="pin_key_size">48dp</dimen>
+    <dimen name="pin_key_gap">5dp</dimen>
+    <dimen name="pin_badge_size">56dp</dimen>
+    <!-- The vector mascot on the streak-ended card and in the empty state (112dp from 640dp height). -->
+    <dimen name="mascot_size">80dp</dimen>
+    <!-- The reward avatar (CHILD and TEEN): 128dp from 640dp height. -->
+    <dimen name="avatar_size">96dp</dimen>
+    <!-- The hospital logo inside its white tile: onboarding (128dp from 640dp height), the home
+         header (the same at every size: it replaces one line of title), About (large). -->
+    <dimen name="onboarding_logo_size">96dp</dimen>
+    <dimen name="header_logo_size">56dp</dimen>
+    <dimen name="about_logo_size">168dp</dimen>
+    <!-- A settings warning row (bg_warning_row, ic_warning): padding inside the box, icon to text,
+         and the gap to the button under the box. -->
+    <dimen name="warning_row_padding_h">12dp</dimen>
+    <dimen name="warning_row_padding_v">10dp</dimen>
+    <dimen name="warning_row_icon_gap">10dp</dimen>
+    <dimen name="warning_row_gap">8dp</dimen>
+</resources>

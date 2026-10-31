@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The course-complete screen (batch 6, R6), over the home screen after the reward: the video in a
+     rounded navy card (the color of the video's own edges), the text under it, a close button from
+     the first second. A tap outside the card, the close button or Back closes it; no PIN.
+     Overdraw is intended: it covers the home screen. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/courseEndOverlay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_celebration"
+    android:clickable="true"
+    android:contentDescription="@string/close"
+    android:elevation="26dp"
+    android:focusable="true"
+    android:visibility="gone"
+    tools:ignore="Overdraw">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/courseCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:focusable="false"
+        app:cardBackgroundColor="@color/course_card"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="8dp"
+        app:strokeWidth="0dp">
+
+        <com.example.tracker.ui.CourseEndLayout
+            android:id="@+id/courseContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp">
+
+            <!-- The video at its own aspect ratio, rounded (a TextureView: clipped, unlike a SurfaceView). -->
+            <FrameLayout
+                android:id="@+id/videoBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextureView
+                    android:id="@+id/video"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/course_video_desc"
+                    android:importantForAccessibility="yes" />
+
+                <!-- When the video cannot play: the celebration avatar as a still, same text below. -->
+                <ImageView
+                    android:id="@+id/fallback"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/celebration_avatar_desc"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/avatar_celebration"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/courseClose"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="top|end"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/bg_course_close"
+                    android:contentDescription="@string/close"
+                    android:src="@drawable/ic_close"
+                    app:tint="@color/on_course_card" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/courseMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:accessibilityLiveRegion="polite"
+                android:gravity="center"
+                android:paddingHorizontal="4dp"
+                android:paddingTop="14dp"
+                android:paddingBottom="4dp"
+                android:textColor="@color/on_course_card"
+                android:textDirection="locale"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="@string/course_end_message" />
+        </com.example.tracker.ui.CourseEndLayout>
+    </com.google.android.material.card.MaterialCardView>
+</FrameLayout>

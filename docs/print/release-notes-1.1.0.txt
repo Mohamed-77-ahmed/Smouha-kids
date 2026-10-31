@@ -1,0 +1,35 @@
+كوكو دوا (لمرضى مستشفى سموحة الجامعي للأطفال)
+الإصدار 1.1.0، رقم الإصدار 4، بتاريخ 2026-10-19
+
+نفس التطبيق اللي كان اسمه «سموحة للأطفال»، باسم وشكل جديد.
+- الاسم الجديد «كوكو دوا»، وأيقونة الديك كوكو.
+- ألوان جديدة: سما زرقا فاتحة وأصفر مشمس وبرتقالي.
+- شعار المستشفى في أول شاشة وفوق في الصفحة الرئيسية وفي «عن التطبيق».
+- مكافأة الطفل أو المراهق فيها شخصية بتحتفل وصوت فرحان قصير. الصوت ممكن يتقفل من إعدادات الأهل («صوت الاحتفال»، بالرقم السري).
+- لما آخر معاد في دوا ليه تاريخ نهاية يتأكد: فيديو قصير لطفل بيحتفل ورسالة إن الجدول المسجل خلص.
+- كل الباقي زي ما هو: التذكير بصوت المنبه، الرقم السري، النقط والأيام ورا بعض.
+
+مهم:
+- بيتثبت فوق 1.0.0، وكل البيانات بتفضل (الأطفال والأدوية والنقط والرقم السري). ماتمسحوش القديمة الأول.
+- التأكد من الملف: SHA256.txt. بصمة شهادة التوقيع (SHA-256)، نفس شهادة 1.0.0:
+  FF:0A:9A:1B:D4:09:D3:85:03:76:FF:A2:C8:3D:0F:27:E2:39:4D:7B:2A:B7:3E:D6:9E:16:14:3E:FF:8A:E8:7A
+- التطبيق للتذكير بس، ومش بيدي نصايح طبية.
+
+----------------------------------------------------------------
+
+Koko Dawa (for the patients of Smouha University Children's Hospital)
+Version 1.1.0, versionCode 4, 2026-10-19
+
+The same app that was called Smouha Kids, with a new name and look.
+- The new name Koko Dawa (كوكو دوا) and the Koko rooster icon.
+- New colors: light sky blue, sunny yellow and orange.
+- The hospital's logo on the first screen, in the home header and on About.
+- The reward for a child or teen shows a celebration character with a short happy sound. Parents can turn the sound off in parent settings ("Celebration sound", PIN-protected).
+- When the last dose of a medicine with an end date is confirmed: a short video of a celebrating child and a message that the recorded schedule is complete.
+- Everything else is unchanged: the alarm-sound reminders, the PIN, points and streaks.
+
+Important:
+- Installs over 1.0.0 and keeps all data (children, medicines, points, the PIN). Do not uninstall the old version first.
+- File check: SHA256.txt. Signing certificate SHA-256, the same as 1.0.0:
+  FF:0A:9A:1B:D4:09:D3:85:03:76:FF:A2:C8:3D:0F:27:E2:39:4D:7B:2A:B7:3E:D6:9E:16:14:3E:FF:8A:E8:7A
+- A reminder tool only; it gives no medical advice.

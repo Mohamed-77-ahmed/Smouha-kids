@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- PIN sheet, portrait: header, keypad, then "Forgot PIN". Scrolls instead of cutting anything off
+     on small screens at large font sizes. layout-land has the side-by-side version. -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingBottom="16dp">
+
+        <com.google.android.material.bottomsheet.BottomSheetDragHandleView
+            android:id="@+id/dragHandle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/view_pin_header" />
+
+        <include
+            android:id="@+id/keypad"
+            layout="@layout/view_pin_keypad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" />
+
+        <include
+            android:id="@+id/forgot"
+            layout="@layout/view_pin_forgot" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

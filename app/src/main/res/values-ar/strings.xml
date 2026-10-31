@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Egyptian Arabic (colloquial). Gender neutral: first person, passive or nouns, no second-person
+    imperatives. Needs review by a native speaker before release (CLAUDE.md 9b).
+-->
+<resources>
+    <string name="app_name">كوكو دوا</string>
+    <string name="hospital_name">مستشفى سموحة الجامعي للأطفال</string>
+    <string name="hospital_logo_desc">شعار مستشفى سموحة الجامعي للأطفال</string>
+    <string name="home_logo_desc">كوكو دوا. شعار مستشفى سموحة الجامعي للأطفال</string>
+    <!-- Common -->
+    <string name="save">حفظ</string>
+    <string name="cancel">إلغاء</string>
+    <string name="delete">مسح</string>
+    <string name="close">قفل</string>
+    <string name="back">رجوع</string>
+    <string name="not_now">مش دلوقتي</string>
+    <string name="list_separator">"، "</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_language_title">اختيار لغة التطبيق</string>
+
+    <!-- Parent PIN -->
+    <string name="pin_create_title">رقم سري جديد للأهل</string>
+    <string name="pin_create_message">الرقم ده للأهل بس. مطلوب لتأكيد الدوا، ولإضافة أو تعديل أو مسح الأدوية، ولبعض إعدادات الأهل.</string>
+    <!-- PIN sheet -->
+    <string name="pin_title_confirm_dose">تأكيد دوا %1$s</string>
+    <string name="pin_step">خطوة %1$d من %2$d: %3$s</string>
+    <string name="pin_step_current">الرقم السري الحالي</string>
+    <plurals name="pin_step_new">
+        <item quantity="zero">رقم سري جديد، من %1$d لـ %2$d رقم</item>
+        <item quantity="one">رقم سري جديد، من %1$d لـ %2$d رقم</item>
+        <item quantity="two">رقم سري جديد، من %1$d لـ %2$d رقم</item>
+        <item quantity="few">رقم سري جديد، من %1$d لـ %2$d أرقام</item>
+        <item quantity="many">رقم سري جديد، من %1$d لـ %2$d رقم</item>
+        <item quantity="other">رقم سري جديد، من %1$d لـ %2$d رقم</item>
+    </plurals>
+    <string name="pin_step_repeat">الرقم السري الجديد مرة تانية</string>
+    <string name="pin_checking">بنتأكد…</string>
+    <string name="pin_key_delete">مسح آخر رقم</string>
+    <string name="pin_key_ok">تأكيد الرقم السري</string>
+    <plurals name="pin_dots_entered">
+        <item quantity="zero">مفيش أرقام لسه</item>
+        <item quantity="one">رقم واحد</item>
+        <item quantity="two">رقمين</item>
+        <item quantity="few">%d أرقام</item>
+        <item quantity="many">%d رقم</item>
+        <item quantity="other">%d رقم</item>
+    </plurals>
+    <string name="pin_reset_title">تغيير الرقم السري للأهل</string>
+    <string name="pin_reset_message">قفل الموبايل اتأكد. المرضى والأدوية والنقط والسلاسل زي ما هي.</string>
+    <plurals name="pin_format_error">
+        <item quantity="zero">لازم من %1$d لـ %2$d رقم</item>
+        <item quantity="one">لازم من %1$d لـ %2$d رقم</item>
+        <item quantity="two">لازم من %1$d لـ %2$d رقم</item>
+        <item quantity="few">لازم من %1$d لـ %2$d أرقام</item>
+        <item quantity="many">لازم من %1$d لـ %2$d رقم</item>
+        <item quantity="other">لازم من %1$d لـ %2$d رقم</item>
+    </plurals>
+    <string name="pin_mismatch">الرقمين مش زي بعض</string>
+    <string name="pin_changed">الرقم السري اتغير</string>
+    <string name="forgot_pin">نسيت الرقم السري</string>
+    <string name="forgot_pin_no_lock">علشان الرقم السري يتغير، لازم يكون فيه قفل شاشة للموبايل الأول (رقم أو نقش أو باسورد).</string>
+    <string name="device_credential_title">تأكيد صاحب الموبايل</string>
+    <string name="device_credential_description">قفل شاشة الموبايل مطلوب لعمل رقم سري جديد للأهل.</string>
+    <string name="pin_msg_add">الرقم السري للأهل مطلوب لإضافة دوا.</string>
+    <string name="pin_msg_edit">الرقم السري للأهل مطلوب لتعديل الدوا.</string>
+    <string name="pin_msg_setting">الرقم السري للأهل مطلوب لتغيير الإعداد ده.</string>
+    <string name="pin_msg_change">الرقم السري الحالي للأهل مطلوب الأول.</string>
+    <string name="pin_msg_manage">الرقم السري للأهل مطلوب لإدارة المرضى والأدوية.</string>
+    <string name="pin_msg_confirm">%1$s: %2$s اتاخد؟ التأكيد بالرقم السري للأهل.</string>
+    <plurals name="pin_wrong_attempts">
+        <item quantity="zero">الرقم السري غلط. فاضل %d محاولة.</item>
+        <item quantity="one">الرقم السري غلط. فاضل محاولة واحدة.</item>
+        <item quantity="two">الرقم السري غلط. فاضل محاولتين.</item>
+        <item quantity="few">الرقم السري غلط. فاضل %d محاولات.</item>
+        <item quantity="many">الرقم السري غلط. فاضل %d محاولة.</item>
+        <item quantity="other">الرقم السري غلط. فاضل %d محاولة.</item>
+    </plurals>
+    <plurals name="pin_locked">
+        <item quantity="zero">محاولات غلط كتير، التطبيق مقفول %d ثانية.</item>
+        <item quantity="one">محاولات غلط كتير، التطبيق مقفول ثانية واحدة.</item>
+        <item quantity="two">محاولات غلط كتير، التطبيق مقفول ثانيتين.</item>
+        <item quantity="few">محاولات غلط كتير، التطبيق مقفول %d ثواني.</item>
+        <item quantity="many">محاولات غلط كتير، التطبيق مقفول %d ثانية.</item>
+        <item quantity="other">محاولات غلط كتير، التطبيق مقفول %d ثانية.</item>
+    </plurals>
+
+    <!-- Home -->
+    <string name="settings_title">إعدادات الأهل</string>
+    <string name="add_medicine">إضافة دوا</string>
+    <string name="filter_all">الكل</string>
+    <string name="patient_label">%1$s · %2$d</string>
+    <string name="patient_label_numbered">%1$s · %2$d (%3$d)</string>
+    <string name="today_empty">يلا نضيف أول دوا</string>
+    <string name="today_all">النهاردة: اتاخد %1$d من %2$d</string>
+    <string name="today_patient">%1$s: اتاخد %2$d من %3$d النهاردة</string>
+    <string name="today_patient_none">%1$s: مفيش أدوية النهاردة</string>
+    <string name="level_label">المستوى</string>
+    <string name="level_hint">فاضل %1$s للمستوى %2$d</string>
+    <string name="section_stats">%1$s · %2$s ورا بعض · المستوى %3$d</string>
+    <string name="status_no_doses">مفيش أدوية النهاردة</string>
+    <string name="status_perfect_day">يوم مثالي! كل أدوية النهاردة اتاخدت</string>
+    <string name="status_progress">اتاخد %1$d من %2$d. فاضل شوية!</string>
+    <string name="no_doses_today">مفيش أدوية النهاردة. يوم حلو! 🎈</string>
+    <string name="empty_state">لسه مفيش أدوية هنا! علامة (+) بتضيف أول دوا.</string>
+    <string name="confirm_button">خدت الدوا</string>
+    <string name="confirm_button_for">تأكيد إن %2$s اتاخد لـ %1$s</string>
+    <string name="dose_taken">اتاخد</string>
+    <string name="dose_missed">فات</string>
+    <string name="dose_overdue">معاده جه</string>
+    <string name="edit_medicine">تعديل الدوا</string>
+    <string name="edit_medicine_named">تعديل %1$s</string>
+    <string name="dose_not_confirmable">مينفعش تأكيد الجرعة دي دلوقتي.</string>
+    <string name="dose_not_found">التذكير ده مبقاش موجود.</string>
+    <string name="confirm_dose_question">%1$s: %2$s اتاخد؟</string>
+    <string name="confirm_yes">أيوه، اتاخد</string>
+    <string name="confirm_not_yet">لسه</string>
+    <string name="banner_notifications_off">الإشعارات مقفولة، فالتذكيرات مش هتظهر.</string>
+    <string name="banner_exact_off">التذكيرات ممكن تتأخر لحد ساعة.</string>
+    <string name="banner_fix">تظبيط</string>
+    <string name="notif_rationale_title">تشغيل التذكيرات؟</string>
+    <string name="notif_rationale_message">التطبيق محتاج إذن الإشعارات علشان التذكيرات توصل في معادها.</string>
+    <string name="notif_rationale_allow">سماح</string>
+    <plurals name="points_label">
+        <item quantity="zero">نقطة</item>
+        <item quantity="one">نقطة</item>
+        <item quantity="two">نقطة</item>
+        <item quantity="few">نقط</item>
+        <item quantity="many">نقطة</item>
+        <item quantity="other">نقطة</item>
+    </plurals>
+    <plurals name="streak_label">
+        <item quantity="zero">يوم ورا بعض</item>
+        <item quantity="one">يوم ورا بعض</item>
+        <item quantity="two">يوم ورا بعض</item>
+        <item quantity="few">أيام ورا بعض</item>
+        <item quantity="many">يوم ورا بعض</item>
+        <item quantity="other">يوم ورا بعض</item>
+    </plurals>
+    <plurals name="points_count">
+        <item quantity="zero">%d نقطة</item>
+        <item quantity="one">نقطة واحدة</item>
+        <item quantity="two">نقطتين</item>
+        <item quantity="few">%d نقط</item>
+        <item quantity="many">%d نقطة</item>
+        <item quantity="other">%d نقطة</item>
+    </plurals>
+    <plurals name="days_count">
+        <item quantity="zero">%d يوم</item>
+        <item quantity="one">يوم واحد</item>
+        <item quantity="two">يومين</item>
+        <item quantity="few">%d أيام</item>
+        <item quantity="many">%d يوم</item>
+        <item quantity="other">%d يوم</item>
+    </plurals>
+
+    <!-- Age groups -->
+    <string name="age_group_child">أطفال</string>
+    <string name="age_group_teen">مراهقين</string>
+    <string name="age_group_adult">كبار</string>
+
+    <!-- Rewards -->
+    <string-array name="cheers">
+        <item>برافو!</item>
+        <item>الله ينوّر!</item>
+        <item>عاش!</item>
+        <item>يا سلام، تحفة!</item>
+        <item>جامد جدًا!</item>
+        <item>خطوة كمان، هايل!</item>
+    </string-array>
+    <string name="cheer_perfect_day">يوم مثالي، برافو!</string>
+    <string name="reward_subtitle">%1$s: %2$s اتاخد</string>
+    <string name="reward_teen_title">شغل حلو يا %1$s</string>
+    <string name="reward_adult_title">الجرعة اتسجلت</string>
+    <string name="reward_close_child">هيه!</string>
+    <string name="celebration_avatar_desc">صاحب طاير فرحان بيحتفل</string>
+    <string name="course_end_message">الجدول المسجل لدوا %1$s خلص. برافو!</string>
+    <string name="course_video_desc">فيديو احتفال: طفل فرحان في جنينة سحرية</string>
+    <string name="reward_no_points">اتحسبت قبل كده، مفيش نقط زيادة</string>
+    <string name="reward_dose">الدوا اتاخد ⁦+%1$d⁩</string>
+    <string name="reward_on_time">في المعاد ⁦+%1$d⁩</string>
+    <string name="reward_perfect_day">كل أدوية النهاردة ⁦+%1$d⁩</string>
+    <string name="reward_milestone">%1$s ورا بعض ⁦+%2$d⁩</string>
+    <string name="streak_line">%1$s ورا بعض</string>
+    <plurals name="plus_points">
+        <item quantity="zero">⁦+%d⁩ نقطة</item>
+        <item quantity="one">⁦+%d⁩ نقطة</item>
+        <item quantity="two">⁦+%d⁩ نقطة</item>
+        <item quantity="few">⁦+%d⁩ نقط</item>
+        <item quantity="many">⁦+%d⁩ نقطة</item>
+        <item quantity="other">⁦+%d⁩ نقطة</item>
+    </plurals>
+    <string name="broken_child_title">ولا يهمك، نبدأ من جديد!</string>
+    <string name="broken_child_subtitle">%1$s، السلسلة وقفت بعد %2$s.</string>
+    <string name="broken_child_action">يلا بينا</string>
+    <string name="broken_teen_title">السلسلة وقفت عند %1$s</string>
+    <string name="broken_teen_subtitle">%1$s، سلسلة جديدة بتبدأ النهاردة.</string>
+    <string name="broken_teen_action">نبدأ تاني</string>
+    <string name="broken_adult_title">السلسلة وقفت. أطول سلسلة ليك: %1$s</string>
+
+    <!-- Add / edit medicine -->
+    <string name="edit_title">تعديل الدوا</string>
+    <string name="section_patient">الدوا ده لمين؟</string>
+    <string name="patient_picker_hint">المريض</string>
+    <string name="new_patient_option">+ مريض جديد</string>
+    <string name="patient_fixed">لـ %1$s</string>
+    <string name="patient_name">اسم المريض</string>
+    <string name="patient_age">السن</string>
+    <string name="section_medicine">الدوا</string>
+    <string name="medicine_name">اسم الدوا</string>
+    <string name="section_schedule">المواعيد</string>
+    <string name="schedule_every_day">كل يوم</string>
+    <string name="schedule_specific_days">أيام معينة</string>
+    <string name="per_day_times">مواعيد مختلفة لكل يوم</string>
+    <string name="times_label">المواعيد</string>
+    <string name="add_time">إضافة معاد</string>
+    <string name="add_time_for">إضافة معاد يوم %1$s</string>
+    <string name="remove_time">مسح %1$s</string>
+    <string name="pick_time_title">معاد التذكير</string>
+    <string name="section_dates">التواريخ (اختياري)</string>
+    <string name="start_date">تاريخ البداية</string>
+    <string name="end_date">تاريخ النهاية</string>
+    <string name="start_date_value">بيبدأ %1$s</string>
+    <string name="end_date_value">بيخلص %1$s</string>
+    <string name="no_start_date">بيبدأ النهاردة</string>
+    <string name="no_end_date">من غير تاريخ نهاية</string>
+    <string name="clear_start_date">مسح تاريخ البداية</string>
+    <string name="clear_end_date">مسح تاريخ النهاية</string>
+    <string name="section_repeat">التذكير تاني لو الدوا متاخدش</string>
+    <string name="repeat_desc">لحد 3 تذكيرات زيادة لحد ما الدوا يتأكد.</string>
+    <plurals name="minutes_short">
+        <item quantity="zero">%d دقيقة</item>
+        <item quantity="one">دقيقة</item>
+        <item quantity="two">دقيقتين</item>
+        <item quantity="few">%d دقايق</item>
+        <item quantity="many">%d دقيقة</item>
+        <item quantity="other">%d دقيقة</item>
+    </plurals>
+    <string name="delete_medicine">مسح الدوا</string>
+    <string name="delete_medicine_title">مسح %1$s؟</string>
+    <string name="delete_medicine_message">التذكيرات بتاعته هتقف. النقط اللي اتكسبت فاضلة.</string>
+    <string name="err_patient_missing">لازم نختار الدوا ده لمين.</string>
+    <string name="err_patient_name">لازم اسم للمريض.</string>
+    <plurals name="err_name_too_long">
+        <item quantity="zero">أقصى حاجة %1$d حرف.</item>
+        <item quantity="one">أقصى حاجة حرف واحد.</item>
+        <item quantity="two">أقصى حاجة حرفين.</item>
+        <item quantity="few">أقصى حاجة %1$d حروف.</item>
+        <item quantity="many">أقصى حاجة %1$d حرف.</item>
+        <item quantity="other">أقصى حاجة %1$d حرف.</item>
+    </plurals>
+    <string name="err_age">السن لازم يكون رقم من 0 لـ 120.</string>
+    <string name="err_gender">لازم اختيار ذكر أو أنثى.</string>
+    <string name="gender_label">النوع</string>
+    <string name="gender_male">ذكر</string>
+    <string name="gender_female">أنثى</string>
+    <string name="err_medicine_name">لازم اسم للدوا.</string>
+    <string name="err_no_slots">لازم يوم ومعاد واحد على الأقل.</string>
+    <string name="err_day_without_times">كل يوم متختار لازم يكون له معاد.</string>
+    <string name="err_duplicate_slot">المعاد ده موجود قبل كده.</string>
+    <string name="err_end_before_start">تاريخ النهاية قبل تاريخ البداية.</string>
+
+    <!-- Parent settings -->
+    <string name="section_language">اللغة</string>
+    <string name="section_pin">الرقم السري للأهل</string>
+    <string name="require_pin">طلب الرقم السري عند تأكيد الدوا</string>
+    <string name="require_pin_desc">كل دوا بيتأكد من الأهل، فالنقط بتتحسب بجد.</string>
+    <string name="change_pin">تغيير الرقم السري</string>
+    <string name="section_family">المرضى والأدوية</string>
+    <string name="manage_button">إدارة المرضى والأدوية</string>
+    <string name="section_reminders">التذكيرات</string>
+    <string name="notifications_on">الإشعارات شغالة</string>
+    <string name="notifications_off">الإشعارات مقفولة، والتذكيرات مش هتظهر</string>
+    <string name="turn_on_notifications">تشغيل الإشعارات</string>
+    <string name="exact_on">التذكيرات بتوصل في معادها</string>
+    <string name="exact_off">التذكيرات ممكن تتأخر لحد ساعة</string>
+    <string name="allow_exact">السماح بالتذكير في المعاد بالظبط</string>
+    <string name="battery_hint">بعض الموبايلات بتوقف التذكيرات علشان توفر البطارية. الأفضل إن التطبيق يشتغل من غير قيود البطارية.</string>
+    <string name="battery_button">إعدادات البطارية</string>
+    <string name="test_reminder">إرسال تذكير تجريبي</string>
+    <string name="test_scheduled">التذكير التجريبي هيوصل بعد 10 ثواني. ممكن التطبيق يتقفل.</string>
+    <string name="alarm_sound">صوت منبه للتذكيرات</string>
+    <string name="alarm_sound_desc">التطبيق بيشغل صوت المنبه لحد 30 ثانية مع كل تذكير. وفي التذكير زرار لإيقاف الصوت.</string>
+    <string name="sound_on_silent_note">صوت المنبه بيشتغل حتى لو الموبايل صامت أو هزاز.</string>
+    <string name="alarm_volume_level">صوت المنبه: %1$d من %2$d</string>
+    <string name="alarm_volume_zero">صوت المنبه على صفر، فالتذكيرات مش هيبقى ليها صوت</string>
+    <string name="sound_settings_button">إعدادات الصوت</string>
+    <string name="dnd_off">وضع عدم الإزعاج مقفول</string>
+    <string name="dnd_allows_alarms">وضع عدم الإزعاج شغال وبيسمح بالمنبهات</string>
+    <string name="dnd_blocks_alarms">وضع عدم الإزعاج شغال ومانع المنبهات، فالتذكيرات مش هيبقى ليها صوت</string>
+    <string name="dnd_settings_button">إعدادات عدم الإزعاج</string>
+    <string name="battery_unrestricted">البطارية: التطبيق شغال من غير قيود</string>
+    <string name="battery_optimized">البطارية: عليها توفير، فالموبايل ممكن يأخر التذكيرات أو يوقفها</string>
+    <string name="section_rewards">المكافآت</string>
+    <string name="celebration_sound">صوت الاحتفال</string>
+    <string name="celebration_sound_desc">صوت فرحان قصير بيشتغل مرة واحدة لما الدوا يتاخد، للأطفال والمراهقين. بيمشي على صوت الميديا في الموبايل.</string>
+    <string name="app_version">الإصدار %1$s (%2$d)</string>
+
+    <!-- About -->
+    <string name="about_title">عن التطبيق</string>
+    <string name="about_intro">تطبيق لتذكير مرضى مستشفى سموحة الجامعي للأطفال وأهاليهم بمواعيد الدوا. بيفكّر في المعاد وبيحتفل بكل دوا يتاخد.</string>
+    <string name="about_disclaimer_title">مهم</string>
+    <string name="about_disclaimer">التطبيق ده للتذكير بس، ومبيديش نصايح طبية ولا جرعات. الالتزام بتعليمات الدكتور دايمًا.</string>
+    <string name="about_privacy_title">البيانات</string>
+    <string name="about_privacy">كل البيانات بتفضل على الموبايل ده بس. التطبيق مالوش اتصال بالإنترنت ومبيبعتش أي حاجة لأي مكان.</string>
+    <string name="section_erase">مسح البيانات</string>
+    <string name="erase_desc">بيمسح كل المرضى والأدوية والنقط والأيام ورا بعض والرقم السري للأهل من على الموبايل ده. التذكيرات بتقف والتطبيق بيبدأ من الأول من اختيار اللغة. المسح ده مينفعش يترجع.</string>
+    <string name="erase_button">مسح كل البيانات</string>
+    <string name="erase_confirm_title">مسح كل حاجة؟</string>
+    <string name="erase_confirm_message">كل المرضى والأدوية والسجل والنقط والأيام ورا بعض هيتمسحوا، ومعاهم الرقم السري للأهل. المسح ده مينفعش يترجع.</string>
+    <string name="erase_confirm_yes">مسح</string>
+    <string name="pin_msg_erase">الرقم السري للأهل مطلوب لمسح كل البيانات.</string>
+
+    <!-- Manage -->
+    <string name="manage_title">المرضى والأدوية</string>
+    <string name="manage_empty">لسه مفيش مرضى.</string>
+    <string name="edit_patient">تعديل المريض</string>
+    <string name="edit_patient_named">تعديل %1$s</string>
+    <string name="delete_patient">مسح المريض</string>
+    <string name="delete_patient_named">مسح %1$s</string>
+    <string name="delete_patient_title">مسح %1$s؟</string>
+    <string name="delete_patient_message">ده هيمسح أدوية وتذكيرات ونقط %1$s بس. باقي المرضى مش هيتأثروا.</string>
+    <string name="no_medicines_for_patient">مفيش أدوية</string>
+    <string name="summary_no_times">مفيش مواعيد</string>
+    <string name="summary_every_day">كل يوم · %1$s</string>
+    <string name="summary_days">%1$s · %2$s</string>
+    <string name="summary_custom">مواعيد مختلفة لكل يوم</string>
+    <string name="summary_from_to">من %1$s لـ %2$s</string>
+    <string name="summary_from">من %1$s</string>
+    <string name="summary_until">لحد %1$s</string>
+
+    <!-- Notifications -->
+    <string name="channel_name_ringing">تذكير الأدوية (منبه)</string>
+    <string name="channel_description_ringing">تذكيرات لما ييجي معاد الدوا. التطبيق بيشغل صوت المنبه بنفسه.</string>
+    <string name="channel_name_alarm">تذكير الأدوية (صوت منبه احتياطي)</string>
+    <string name="channel_description_alarm">بيستخدم بس لو التطبيق مقدرش يشغل صوت المنبه بنفسه.</string>
+    <string name="channel_name">تذكير الأدوية (صوت الإشعارات)</string>
+    <string name="channel_description">تذكيرات بصوت الإشعارات العادي، لما صوت المنبه يكون مقفول.</string>
+    <string name="stop_sound">إيقاف الصوت</string>
+    <string name="notif_title">معاد الدوا</string>
+    <string name="notif_body">%1$s: معاد %2$s</string>
+    <string name="notif_body_child">يلا يا %1$s، معاد %2$s!</string>
+    <string name="notif_repeat_title">تذكير</string>
+    <string name="notif_repeat_body">%1$s: %2$s لسه متاخدش</string>
+    <string name="test_notification_title">تذكير تجريبي</string>
+    <string name="test_notification_text">التذكيرات شغالة.</string>
+</resources>

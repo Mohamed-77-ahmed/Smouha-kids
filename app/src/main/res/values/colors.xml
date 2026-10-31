@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Palette v2 "Koko" (light, batch 6, docs/palette-v2.md). From the Koko pictures: rooster orange
+    #F38E32, sunny yellow #FDC440, sky blue #C3E2EB / #48B7D3. Primary is the rooster orange family
+    (a deep tone that carries white text and works as text), secondary the sunny yellow (its container
+    is the yellow itself, always with dark text), tertiary the sky blue. Background light sky, cards and
+    sheets warm cream. Every text/background pair is >= 4.5:1, icons and borders >= 3:1 (ContrastTest).
+    Red and amber stay semantic (missed/overdue, warnings); the comb red is never a brand color.
+    Same names in values-night.
+-->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="primary">#A84A0A</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="primary_container">#FFE2C6</color>
+    <color name="on_primary_container">#5F2700</color>
+
+    <color name="secondary">#7A5700</color>
+    <color name="on_secondary">#FFFFFF</color>
+    <color name="secondary_container">#FDC440</color>
+    <color name="on_secondary_container">#3B2800</color>
+
+    <color name="tertiary">#0B6A86</color>
+    <color name="on_tertiary">#FFFFFF</color>
+    <color name="tertiary_container">#D4EEF7</color>
+    <color name="on_tertiary_container">#073A4C</color>
+
+    <color name="background">#F4FAFD</color>
+    <color name="on_background">#1D1B18</color>
+    <color name="surface">#F4FAFD</color>
+    <color name="on_surface">#1D1B18</color>
+    <color name="surface_variant">#E4EEF3</color>
+    <color name="on_surface_variant">#4A545C</color>
+    <color name="outline">#6E7880</color>
+    <color name="surface_lowest">#FFFFFF</color>
+    <color name="surface_low">#FFFCF6</color>
+    <color name="surface_container">#FDF6EA</color>
+    <color name="surface_high">#F9EFDF</color>
+    <color name="surface_highest">#F4E8D4</color>
+
+    <!-- Semantic, outside the palette. Status never relies on color alone (icon or text too). -->
+    <color name="error">#B91C1C</color>
+    <color name="on_error">#FFFFFF</color>
+    <color name="error_container">#FEE2E2</color>
+    <color name="on_error_container">#7F1D1D</color>
+    <!-- Warnings: amber sits between the brand's orange and yellow, so a warning row is a bordered
+         box with a warning icon (warning = icon and border, text in on_warning_container), never an
+         amber label alone. -->
+    <color name="warning">#8A5300</color>
+    <color name="warning_container">#FFF1CC</color>
+    <color name="on_warning_container">#4A2C00</color>
+    <color name="success">#166534</color>
+
+    <!-- Reward screen accents (text on the card surface). -->
+    <color name="points">#0B6A86</color>
+    <color name="streak">#B91C1C</color>
+
+    <!-- Gradient light sky blue, through cream, to soft yellow (to bottom-right) for the header,
+         onboarding, the FAB, the PIN badge and the celebration backdrop. A plain sky-to-yellow blend
+         turns grey-green in the middle, hence the cream center. -->
+    <color name="gradient_start">#BEE5F4</color>
+    <color name="gradient_center">#FFF6E0</color>
+    <color name="gradient_end">#FFDD80</color>
+    <color name="on_gradient">#1D1B18</color>
+    <color name="gradient_scrim_start">#E6BEE5F4</color>
+    <color name="gradient_scrim_center">#E6FFF6E0</color>
+    <color name="gradient_scrim_end">#E6FFDD80</color>
+    <color name="glass">#66FFFFFF</color>
+    <color name="progress_on_gradient">#A84A0A</color>
+
+    <!-- Launcher icon and splash (batch 6, D36): the sky blue of koko.jpg, sampled by
+         scripts/make-brand-assets.ps1 from the top and bottom rows of the rooster's crop; koko_sky is
+         their middle, the flat splash background. The splash name is dark text on it (IconContrastTest).
+         Light and dark mode use the same icon and splash (no night value). -->
+    <color name="koko_icon_bg_top">#C3E4F0</color>
+    <color name="koko_icon_bg_bottom">#E5F8FF</color>
+    <color name="koko_sky">#D4EEF7</color>
+    <!-- Read by scripts/render-splash-name.ps1 and IconContrastTest, not by another resource. -->
+    <color name="splash_name_text" tools:ignore="UnusedResources">#12304A</color>
+
+    <!-- The hospital logo's tile (onboarding, home header, About): white in light and dark mode (no
+         night value), because the logo is drawn on white. -->
+    <color name="logo_tile">#FFFFFF</color>
+
+    <!-- The course-complete card (batch 6, R6): the deep navy of the video's own edges, white text,
+         the same in light and dark mode (no night value). The close button sits on a dark round
+         patch so it stays visible on any frame of the video (ContrastTest). -->
+    <color name="course_card">#1E2A44</color>
+    <color name="on_course_card">#FFFFFF</color>
+    <color name="course_close_bg">#99000000</color>
+
+    <!-- Card shadows: tinted with the darkest sky blue instead of grey, so they read softer. -->
+    <color name="shadow_soft">#073A4C</color>
+
+    <!-- Mascot (CHILD streak ended, empty state): a capsule character, the same in light
+         and dark mode (no night value). The outline carries the face and reaches 4.5:1 on both body
+         halves; the body stands out from the card by its outline (light) or its top half (dark),
+         3:1 or more (MascotTest). -->
+    <color name="mascot_top">#F0FDF4</color>
+    <color name="mascot_bottom">#4ADE80</color>
+    <color name="mascot_line">#14532D</color>
+    <color name="mascot_cheek">#99F6E4</color>
+    <color name="mascot_spark">#14B8A6</color>
+</resources>

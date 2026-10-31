@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Child-friendly shapes (CLAUDE.md 9, design tokens): cards and sheets with 28dp corners, buttons at
+     least 56dp high with fully rounded ends, soft low shadows tinted with the palette. The PIN keys
+     keep their own sizes (styles_pin.xml), text-only buttons keep a 48dp touch target. -->
+<resources>
+
+    <!-- Filled, tonal and outlined buttons: 56dp, no insets (the visible button is the full 56dp), pill ends. -->
+    <style name="Widget.PillPals.Button" parent="Widget.Material3.Button">
+        <item name="android:minHeight">56dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.PillPals.Circle</item>
+    </style>
+
+    <style name="Widget.PillPals.Button.Tonal" parent="Widget.Material3.Button.TonalButton">
+        <item name="android:minHeight">56dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.PillPals.Circle</item>
+    </style>
+
+    <style name="Widget.PillPals.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">56dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.PillPals.Circle</item>
+    </style>
+
+    <!-- The dose "I took it" button: larger than the others, with a check mark. -->
+    <style name="Widget.PillPals.Button.Confirm" parent="Widget.PillPals.Button">
+        <item name="android:minHeight">64dp</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">24dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="icon">@drawable/ic_check</item>
+        <item name="iconSize">24dp</item>
+        <item name="iconPadding">8dp</item>
+    </style>
+
+    <!-- The reward avatar: a rounded picture (its own background stays, it cannot be cut out). -->
+    <style name="ShapeAppearance.PillPals.Avatar" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">24dp</item>
+    </style>
+
+    <!-- Cards: 28dp corners, a low shadow tinted with the palette instead of grey. -->
+    <style name="Widget.PillPals.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">28dp</item>
+        <item name="cardElevation">1dp</item>
+        <item name="android:outlineAmbientShadowColor">@color/shadow_soft</item>
+        <item name="android:outlineSpotShadowColor">@color/shadow_soft</item>
+    </style>
+</resources>

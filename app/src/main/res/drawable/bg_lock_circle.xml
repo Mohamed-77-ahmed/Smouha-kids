@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The PIN sheet's lock badge: the app gradient (sky blue, cream, soft yellow, to bottom-right) in a circle. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <gradient
+        android:angle="315"
+        android:centerColor="@color/gradient_center"
+        android:endColor="@color/gradient_end"
+        android:startColor="@color/gradient_start" />
+</shape>

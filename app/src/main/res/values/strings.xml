@@ -1,0 +1,309 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- App identity (CLAUDE.md 1): Koko Dawa is the application label and the launcher label. The hospital
+         name is a separate string: it names the hospital (onboarding, About), never the app. -->
+    <string name="app_name">Koko Dawa</string>
+    <string name="hospital_name">Smouha University Children\'s Hospital</string>
+    <!-- The hospital's logo (onboarding, About) and the home header, where the logo stands in for the
+         app's name: a screen reader still hears which app this is. Never an endorsement claim. -->
+    <string name="hospital_logo_desc">Smouha University Children\'s Hospital logo</string>
+    <string name="home_logo_desc">Koko Dawa. Smouha University Children\'s Hospital logo</string>
+    <!-- Language names are always shown in their own language. -->
+    <string name="language_arabic" translatable="false">العربية</string>
+    <string name="language_english" translatable="false">English</string>
+
+    <!-- Common -->
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="close">Close</string>
+    <string name="back">Back</string>
+    <string name="not_now">Not now</string>
+    <string name="list_separator">", "</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_language_title">Choose the app language</string>
+
+    <!-- Parent PIN -->
+    <string name="pin_create_title">Create a parent PIN</string>
+    <string name="pin_create_message">Only grown-ups should know this PIN. It is needed to confirm pills, to add, edit or delete medicines, and for some parent settings.</string>
+    <!-- PIN sheet -->
+    <string name="pin_title_confirm_dose">Confirm %1$s\'s pill</string>
+    <string name="pin_step">Step %1$d of %2$d: %3$s</string>
+    <string name="pin_step_current">Current PIN</string>
+    <!-- Quantity is the largest allowed length (%2$d), as in pin_format_error. -->
+    <plurals name="pin_step_new">
+        <item quantity="one">New PIN, %1$d to %2$d digit</item>
+        <item quantity="other">New PIN, %1$d to %2$d digits</item>
+    </plurals>
+    <string name="pin_step_repeat">The new PIN once more</string>
+    <string name="pin_checking">Checking…</string>
+    <string name="pin_key_delete">Delete the last digit</string>
+    <string name="pin_key_ok">Confirm the PIN</string>
+    <plurals name="pin_dots_entered">
+        <item quantity="one">%d digit entered</item>
+        <item quantity="other">%d digits entered</item>
+    </plurals>
+    <string name="pin_reset_title">Set a new parent PIN</string>
+    <string name="pin_reset_message">The phone lock was confirmed. Patients, medicines, points and streaks stay as they are.</string>
+    <!-- Quantity is the largest allowed length (%2$d). -->
+    <plurals name="pin_format_error">
+        <item quantity="one">Use %1$d to %2$d digit</item>
+        <item quantity="other">Use %1$d to %2$d digits</item>
+    </plurals>
+    <string name="pin_mismatch">The two PINs are not the same</string>
+    <string name="pin_changed">PIN changed</string>
+    <string name="forgot_pin">Forgot PIN</string>
+    <string name="forgot_pin_no_lock">To reset a forgotten PIN, the phone needs a screen lock first (PIN, pattern or password).</string>
+    <string name="device_credential_title">Phone owner check</string>
+    <string name="device_credential_description">The phone\'s screen lock is needed to set a new parent PIN.</string>
+    <string name="pin_msg_add">The parent PIN is needed to add a medicine.</string>
+    <string name="pin_msg_edit">The parent PIN is needed to change a medicine.</string>
+    <string name="pin_msg_setting">The parent PIN is needed to change this setting.</string>
+    <string name="pin_msg_change">The current parent PIN is needed first.</string>
+    <string name="pin_msg_manage">The parent PIN is needed to manage patients and medicines.</string>
+    <string name="pin_msg_confirm">Grown-up check: %1$s took %2$s?</string>
+    <plurals name="pin_wrong_attempts">
+        <item quantity="one">Wrong PIN. %d try left.</item>
+        <item quantity="other">Wrong PIN. %d tries left.</item>
+    </plurals>
+    <plurals name="pin_locked">
+        <item quantity="one">Too many wrong tries. Locked for %d second.</item>
+        <item quantity="other">Too many wrong tries. Locked for %d seconds.</item>
+    </plurals>
+
+    <!-- Home -->
+    <string name="settings_title">Parent settings</string>
+    <string name="add_medicine">Add medicine</string>
+    <string name="filter_all">All</string>
+    <!-- Avatar emoji before a name or line; same order in both languages. -->
+    <string name="avatar_label" translatable="false">%1$s %2$s</string>
+    <string name="patient_label">%1$s · %2$d</string>
+    <string name="patient_label_numbered">%1$s · %2$d (%3$d)</string>
+    <string name="today_empty">Let\'s add the first medicine</string>
+    <!-- "X of Y taken": no word depends on the numbers, in English or Arabic. -->
+    <string name="today_all" tools:ignore="PluralsCandidate">Today: %1$d of %2$d taken</string>
+    <string name="today_patient" tools:ignore="PluralsCandidate">%1$s: %2$d of %3$d taken today</string>
+    <string name="today_patient_none">%1$s: no pills today</string>
+    <string name="level_label">level</string>
+    <string name="level_hint">%1$s to level %2$d</string>
+    <string name="section_stats">%1$s · %2$s in a row · level %3$d</string>
+    <string name="status_no_doses">No pills today</string>
+    <string name="status_perfect_day">Perfect day! All of today\'s pills are taken</string>
+    <string name="status_progress" tools:ignore="PluralsCandidate">%1$d of %2$d taken. Keep going!</string>
+    <string name="no_doses_today">No pills today. Enjoy the day! 🎈</string>
+    <string name="empty_state">Nothing here yet! The (+) button adds the first medicine.</string>
+    <string name="confirm_button">I took it</string>
+    <string name="confirm_button_for">Confirm that %1$s took %2$s</string>
+    <string name="dose_taken">Taken</string>
+    <string name="dose_missed">Missed</string>
+    <string name="dose_overdue">Time to take it</string>
+    <string name="edit_medicine">Edit medicine</string>
+    <string name="edit_medicine_named">Edit %1$s</string>
+    <string name="dose_not_confirmable">This dose can no longer be confirmed.</string>
+    <string name="dose_not_found">This reminder is no longer valid.</string>
+    <string name="confirm_dose_question">Did %1$s take %2$s?</string>
+    <string name="confirm_yes">Yes, taken</string>
+    <string name="confirm_not_yet">Not yet</string>
+    <string name="banner_notifications_off">Notifications are off, so reminders will not show.</string>
+    <string name="banner_exact_off">Reminders may come up to an hour late.</string>
+    <string name="banner_fix">Fix</string>
+    <string name="notif_rationale_title">Allow reminders?</string>
+    <string name="notif_rationale_message">The app needs to show notifications so reminders arrive on time.</string>
+    <string name="notif_rationale_allow">Allow</string>
+    <plurals name="points_label">
+        <item quantity="one">point</item>
+        <item quantity="other">points</item>
+    </plurals>
+    <plurals name="streak_label">
+        <item quantity="one">day in a row</item>
+        <item quantity="other">days in a row</item>
+    </plurals>
+    <plurals name="points_count">
+        <item quantity="one">%d point</item>
+        <item quantity="other">%d points</item>
+    </plurals>
+    <plurals name="days_count">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+
+    <!-- Age groups -->
+    <string name="age_group_child">Child</string>
+    <string name="age_group_teen">Teen</string>
+    <string name="age_group_adult">Adult</string>
+
+    <!-- Rewards -->
+    <string-array name="cheers">
+        <item>Bravo!</item>
+        <item>Super star!</item>
+        <item>Yay, well done!</item>
+        <item>High five!</item>
+        <item>Wow, amazing!</item>
+        <item>One more done, great job!</item>
+    </string-array>
+    <string name="cheer_perfect_day">Perfect day, bravo!</string>
+    <string name="reward_subtitle">%1$s took %2$s</string>
+    <string name="reward_teen_title">Nice work, %1$s</string>
+    <string name="reward_adult_title">Dose recorded</string>
+    <string name="reward_close_child">Yay!</string>
+    <string name="celebration_avatar_desc">A happy flying friend celebrating</string>
+    <!-- End of a dated course (batch 6, R6): names the recorded schedule, never says the treatment is over. -->
+    <string name="course_end_message">The recorded schedule for %1$s is complete. Bravo!</string>
+    <string name="course_video_desc">Celebration video: a happy child in a magic garden</string>
+    <string name="reward_no_points">Already counted, no extra points</string>
+    <string name="reward_dose">Pill taken +%1$d</string>
+    <string name="reward_on_time">On time +%1$d</string>
+    <string name="reward_perfect_day">All of today\'s pills +%1$d</string>
+    <string name="reward_milestone">%1$s in a row +%2$d</string>
+    <string name="streak_line">%1$s in a row</string>
+    <plurals name="plus_points">
+        <item quantity="one">+%d point</item>
+        <item quantity="other">+%d points</item>
+    </plurals>
+    <string name="broken_child_title">Never mind, let\'s start again!</string>
+    <string name="broken_child_subtitle">%1$s, the streak stopped after %2$s.</string>
+    <string name="broken_child_action">Let\'s go</string>
+    <string name="broken_teen_title">Streak ended at %1$s</string>
+    <string name="broken_teen_subtitle">%1$s, a new streak starts today.</string>
+    <string name="broken_teen_action">Start again</string>
+    <string name="broken_adult_title">Streak ended. Best streak: %1$s</string>
+
+    <!-- Add / edit medicine -->
+    <string name="edit_title">Edit medicine</string>
+    <string name="section_patient">Who is it for?</string>
+    <string name="patient_picker_hint">Patient</string>
+    <string name="new_patient_option">+ New patient</string>
+    <string name="patient_fixed">For %1$s</string>
+    <string name="patient_name">Patient name</string>
+    <string name="patient_age">Age</string>
+    <string name="section_medicine">Medicine</string>
+    <string name="medicine_name">Medicine name</string>
+    <string name="section_schedule">Times</string>
+    <string name="schedule_every_day">Every day</string>
+    <string name="schedule_specific_days">Specific days</string>
+    <string name="per_day_times">Different times on different days</string>
+    <string name="times_label">Times</string>
+    <string name="add_time">Add time</string>
+    <string name="add_time_for">Add time for %1$s</string>
+    <string name="remove_time">Remove %1$s</string>
+    <string name="pick_time_title">Reminder time</string>
+    <string name="section_dates">Dates (optional)</string>
+    <string name="start_date">Start date</string>
+    <string name="end_date">End date</string>
+    <string name="start_date_value">Starts %1$s</string>
+    <string name="end_date_value">Ends %1$s</string>
+    <string name="no_start_date">Starts today</string>
+    <string name="no_end_date">No end date</string>
+    <string name="clear_start_date">Remove start date</string>
+    <string name="clear_end_date">Remove end date</string>
+    <string name="section_repeat">Remind again if not taken</string>
+    <string name="repeat_desc">Up to 3 more reminders until the pill is confirmed.</string>
+    <plurals name="minutes_short">
+        <item quantity="one">%d min</item>
+        <item quantity="other">%d min</item>
+    </plurals>
+    <string name="delete_medicine">Delete medicine</string>
+    <string name="delete_medicine_title">Delete %1$s?</string>
+    <string name="delete_medicine_message">Its reminders stop. Points already earned stay.</string>
+    <string name="err_patient_missing">Choose who this medicine is for.</string>
+    <string name="err_patient_name">The patient needs a name.</string>
+    <plurals name="err_name_too_long">
+        <item quantity="one">At most %1$d letter.</item>
+        <item quantity="other">At most %1$d letters.</item>
+    </plurals>
+    <string name="err_age">Age must be a number from 0 to 120.</string>
+    <string name="err_gender">Choose male or female.</string>
+    <string name="gender_label">Gender</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="err_medicine_name">The medicine needs a name.</string>
+    <string name="err_no_slots">Add at least one day and time.</string>
+    <string name="err_day_without_times">Every chosen day needs a time.</string>
+    <string name="err_duplicate_slot">This time is already in the list.</string>
+    <string name="err_end_before_start">The end date is before the start date.</string>
+
+    <!-- Parent settings -->
+    <string name="section_language">Language</string>
+    <string name="section_pin">Parent PIN</string>
+    <string name="require_pin">Ask for the PIN when a pill is taken</string>
+    <string name="require_pin_desc">A grown-up confirms each pill, so points are only earned for real.</string>
+    <string name="change_pin">Change PIN</string>
+    <string name="section_family">Patients and medicines</string>
+    <string name="manage_button">Manage patients and medicines</string>
+    <string name="section_reminders">Reminders</string>
+    <string name="notifications_on">Notifications are on</string>
+    <string name="notifications_off">Notifications are off, reminders will not show</string>
+    <string name="turn_on_notifications">Turn on notifications</string>
+    <string name="exact_on">Reminders ring on time</string>
+    <string name="exact_off">Reminders may come up to an hour late</string>
+    <string name="allow_exact">Allow exact reminders</string>
+    <string name="battery_hint">Some phones stop reminders to save battery. Let the app run without battery limits.</string>
+    <string name="battery_button">Battery settings</string>
+    <string name="test_reminder">Send a test reminder</string>
+    <string name="test_scheduled">A test reminder arrives in 10 seconds. The app can be closed.</string>
+    <string name="alarm_sound">Alarm sound for reminders</string>
+    <string name="alarm_sound_desc">The app plays the alarm sound for up to 30 seconds at every reminder. The reminder has a Stop sound button.</string>
+    <string name="sound_on_silent_note">The alarm sound plays even when the phone is on silent or vibrate.</string>
+    <string name="alarm_volume_level">Alarm volume: %1$d of %2$d</string>
+    <string name="alarm_volume_zero">Alarm volume is at 0, so reminders make no sound</string>
+    <string name="sound_settings_button">Sound settings</string>
+    <string name="dnd_off">Do Not Disturb is off</string>
+    <string name="dnd_allows_alarms">Do Not Disturb is on and lets alarms through</string>
+    <string name="dnd_blocks_alarms">Do Not Disturb is on and blocks alarms, so reminders make no sound</string>
+    <string name="dnd_settings_button">Do Not Disturb settings</string>
+    <string name="battery_unrestricted">Battery: no limits for the app</string>
+    <string name="battery_optimized">Battery: optimized, so the phone may delay or stop reminders</string>
+    <string name="section_rewards">Rewards</string>
+    <string name="celebration_sound">Celebration sound</string>
+    <string name="celebration_sound_desc">A short happy sound plays once when a child or a teen takes a pill. It follows the phone\'s media volume.</string>
+    <string name="app_version">Version %1$s (%2$d)</string>
+
+    <!-- About -->
+    <string name="about_title">About the app</string>
+    <string name="about_intro">A medicine reminder for the patients of Smouha University Children\'s Hospital and their families. It reminds at the right time and celebrates every pill that is taken.</string>
+    <string name="about_disclaimer_title">Important</string>
+    <string name="about_disclaimer">This app is a reminder tool only. It gives no medical advice and no doses. Always follow the doctor\'s instructions.</string>
+    <string name="about_privacy_title">Data</string>
+    <string name="about_privacy">Everything stays on this phone only. The app has no internet access and sends nothing anywhere.</string>
+    <string name="section_erase">Erase data</string>
+    <string name="erase_desc">Deletes all patients, medicines, points, streaks and the parent PIN from this phone. Reminders stop and the app starts again from the language choice. This cannot be undone.</string>
+    <string name="erase_button">Erase all data</string>
+    <string name="erase_confirm_title">Erase everything?</string>
+    <string name="erase_confirm_message">All patients, medicines, history, points and streaks will be deleted, together with the parent PIN. This cannot be undone.</string>
+    <string name="erase_confirm_yes">Erase</string>
+    <string name="pin_msg_erase">The parent PIN is needed to erase all data.</string>
+
+    <!-- Manage -->
+    <string name="manage_title">Patients and medicines</string>
+    <string name="manage_empty">No patients yet.</string>
+    <string name="edit_patient">Edit patient</string>
+    <string name="edit_patient_named">Edit %1$s</string>
+    <string name="delete_patient">Delete patient</string>
+    <string name="delete_patient_named">Delete %1$s</string>
+    <string name="delete_patient_title">Delete %1$s?</string>
+    <string name="delete_patient_message">This deletes only the medicines, reminders and points of %1$s. Other patients are not touched.</string>
+    <string name="no_medicines_for_patient">No medicines</string>
+    <string name="summary_no_times">No times</string>
+    <string name="summary_every_day">Every day · %1$s</string>
+    <string name="summary_days">%1$s · %2$s</string>
+    <string name="summary_custom">Different times on different days</string>
+    <string name="summary_from_to">From %1$s to %2$s</string>
+    <string name="summary_from">From %1$s</string>
+    <string name="summary_until">Until %1$s</string>
+
+    <!-- Notifications -->
+    <string name="channel_name_ringing">Medicine reminders (alarm)</string>
+    <string name="channel_description_ringing">Reminders when it is time for a medicine. The app plays the alarm sound itself.</string>
+    <string name="channel_name_alarm">Medicine reminders (backup alarm sound)</string>
+    <string name="channel_description_alarm">Used only when the app cannot play the alarm sound itself.</string>
+    <string name="channel_name">Medicine reminders (notification sound)</string>
+    <string name="channel_description">Reminders with the normal notification sound, when the alarm sound is off.</string>
+    <string name="stop_sound">Stop sound</string>
+    <string name="notif_title">Medicine time</string>
+    <string name="notif_body">%1$s: time for %2$s</string>
+    <string name="notif_body_child">Come on %1$s, it\'s time for %2$s!</string>
+    <string name="notif_repeat_title">Reminder</string>
+    <string name="notif_repeat_body">%1$s: %2$s is not taken yet</string>
+    <string name="test_notification_title">Test reminder</string>
+    <string name="test_notification_text">Reminders are working.</string>
+</resources>

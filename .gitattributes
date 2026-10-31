@@ -1,0 +1,16 @@
+# Line endings (batch 7): the Unix wrapper keeps LF, Windows scripts keep CRLF.
+* text=auto
+gradlew text eol=lf
+*.sh text eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binary files are never converted.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.mp4 binary
+*.mp3 binary
+*.jar binary
+*.apk binary
+*.pdf binary

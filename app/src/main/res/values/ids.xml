@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- View tags of Motion.idle (the running animator and its detach listener). -->
+    <item name="idle_motion" type="id" />
+    <item name="idle_detach" type="id" />
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <!-- Android 12+: the same launch screen plus the app name (كوكو دوا / Koko Dawa) under the icon. The
+         platform shows no text there, so the name is an image (scripts/render-splash-name.ps1 renders it
+         from app_name in the color splash_name_text; drawable-ar-nodpi has the Arabic one). Android 9 to 11
+         show the icon only. -->
+    <style name="Theme.Tracker.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/koko_sky</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <item name="android:windowSplashScreenBrandingImage">@drawable/splash_name</item>
+        <item name="postSplashScreenTheme">@style/Theme.Tracker</item>
+    </style>
+</resources>

@@ -1,0 +1,84 @@
+/* Shared print style for the guides, the handoff and the card (scripts/make-docs.ps1, scripts/make-card.ps1).
+   Printed to PDF by headless Edge; system fonts only (Segoe UI has Arabic and Latin), nothing downloaded.
+   Colors: palette v2 "Koko" (docs/palette-v2.md): orange #A84A0A, sky #0B6A86, sunny yellow #FDC440, cream #FFF6E0;
+   amber stays the warning color. Text colors are the app's checked pairs (4.5:1 or more on white and on the boxes). */
+@page { size: A4; margin: 12mm 14mm 13mm; }
+* { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+html { direction: rtl; }
+html[dir="ltr"] { direction: ltr; }
+body { margin: 0; font-family: "Segoe UI", Tahoma, Arial, sans-serif; font-size: 13.5pt; line-height: 1.5; color: #1f2937; }
+h1 { font-size: 23pt; line-height: 1.25; color: #A84A0A; margin: 0 0 1.5mm; }
+h2 { font-size: 16.5pt; line-height: 1.3; color: #0B6A86; margin: 4mm 0 2mm; break-after: avoid; }
+h3 { font-size: 13.5pt; color: #A84A0A; margin: 3mm 0 1mm; break-after: avoid; }
+p { margin: 1.2mm 0; }
+.lead { font-size: 13pt; color: #374151; margin: 0 0 3mm; }
+.page { break-after: page; }
+.page:last-child { break-after: auto; }
+ul, ol { margin: 1mm 0; padding-inline-start: 6mm; }
+li { margin: 0.8mm 0; }
+bdi, .ltr { unicode-bidi: isolate; }
+/* An English name never breaks over two lines inside Arabic text (it would read in the wrong order);
+   long technical identifiers (code) may still wrap. */
+bdi { white-space: nowrap; }
+bdi code { white-space: normal; overflow-wrap: anywhere; }
+.box { border-radius: 3mm; padding: 2.5mm 4mm; margin: 2.5mm 0; break-inside: avoid; }
+.note { background: #FFF6E0; border-inline-start: 1.5mm solid #FDC440; }
+.warn { background: #fff7ed; border-inline-start: 1.5mm solid #ea580c; }
+.info { background: #EAF6FB; border-inline-start: 1.5mm solid #0B6A86; }
+.box h3 { margin-top: 0; }
+.fill { background: #fef3c7; outline: 0.5mm dashed #b45309; padding: 0 1.5mm; font-weight: 700; unicode-bidi: isolate; }
+.small { font-size: 10.5pt; color: #4b5563; }
+
+/* Steps with a phone picture under each (3 per row) */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm 5mm; margin-top: 2mm; }
+.step { break-inside: avoid; display: flex; flex-direction: column; }
+.step .text { display: flex; gap: 2mm; align-items: flex-start; min-height: 25mm; font-size: 12.5pt; line-height: 1.45; }
+.num { flex: none; display: inline-block; width: 8mm; height: 8mm; border-radius: 50%; background: #A84A0A; color: #fff; font-weight: 700; font-size: 12pt; line-height: 8mm; text-align: center; margin-top: 0.5mm; }
+.shot { margin-top: 1.5mm; height: 90mm; display: flex; justify-content: center; align-items: flex-start; }
+.shot img { max-width: 100%; max-height: 90mm; border: 0.35mm solid #d1d5db; border-radius: 3mm; }
+.steps.big .shot { height: 108mm; }
+.steps.big .shot img { max-height: 108mm; }
+.steps.big .placeholder { height: 108mm; width: 50mm; }
+.wide-shot { display: block; width: 120mm; max-width: 100%; margin: 2mm auto 3mm; border: 0.35mm solid #d1d5db; border-radius: 3mm; }
+.placeholder { width: 44mm; height: 90mm; border: 0.6mm dashed #b45309; background: #fffbeb; color: #92400e; border-radius: 3mm; padding: 3mm; font-size: 10pt; line-height: 1.4; text-align: center; display: flex; flex-direction: column; justify-content: center; gap: 2mm; }
+.placeholder b { font-size: 11pt; }
+.placeholder code { direction: ltr; unicode-bidi: isolate; font-family: Consolas, "Courier New", monospace; font-size: 7.5pt; line-height: 1.5; }
+
+/* Text beside one picture */
+.side { display: grid; grid-template-columns: 1fr 52mm; gap: 6mm; align-items: start; break-inside: avoid; }
+.side .shot { height: auto; margin-top: 0; }
+.side .shot img { max-height: 95mm; }
+
+/* Dense documents (hospital handoff) */
+body.dense { font-size: 10pt; line-height: 1.38; }
+body.dense h1 { font-size: 17pt; }
+body.dense h2 { font-size: 12pt; margin: 2.4mm 0 0.8mm; }
+body.dense .lead { font-size: 10pt; margin-bottom: 1.5mm; }
+body.dense li { margin: 0.3mm 0; }
+body.dense .box { padding: 1.8mm 3mm; margin: 1.8mm 0; }
+
+table { border-collapse: collapse; width: 100%; font-size: 10.5pt; line-height: 1.4; }
+body.dense table { font-size: 9pt; line-height: 1.3; }
+tr { break-inside: avoid; }
+th, td { border: 0.3mm solid #d1d5db; padding: 1.2mm 2mm; vertical-align: top; text-align: start; }
+th { background: #FFF6E0; color: #A84A0A; }
+code { font-family: Consolas, "Courier New", monospace; font-size: 0.85em; }
+.fp { direction: ltr; unicode-bidi: isolate; font-family: Consolas, "Courier New", monospace; font-size: 9pt; word-break: break-all; }
+
+/* The app's identity at the top of a document: the Koko rooster icon beside the title. */
+.brand { display: flex; align-items: center; gap: 4mm; margin: 0 0 1.5mm; }
+.brand img { flex: none; width: 19mm; height: 19mm; border-radius: 4.5mm; }
+.brand h1 { margin: 0; }
+body.dense .brand img { width: 14mm; height: 14mm; border-radius: 3.5mm; }
+.logo-line { display: flex; align-items: center; gap: 3mm; font-size: 9pt; color: #4b5563; margin: 1mm 0; }
+.logo-line img { flex: none; width: 13mm; height: 13mm; border: 0.3mm solid #d1d5db; border-radius: 2.5mm; background: #fff; }
+/* A page with three text-beside-picture blocks (user guide page 4): smaller pictures so they fit one page. */
+.three-sides h2 { margin-top: 2.5mm; }
+.three-sides .side { grid-template-columns: 1fr 36mm; }
+.three-sides .side .shot img { max-height: 64mm; }
+.three-sides ul { margin: 0.5mm 0; }
+.three-sides li { margin: 0.4mm 0; }
+
+/* The last page of the user guide (battery and questions): a slightly smaller text so it stays one page. */
+.tight { font-size: 12.6pt; line-height: 1.42; }
+.tight h2 { margin-top: 3mm; }

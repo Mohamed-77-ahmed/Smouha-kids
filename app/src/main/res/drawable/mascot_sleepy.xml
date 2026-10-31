@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Mascot, sleepy (CHILD streak ended): leaning a little, closed eyes, small mouth, "z z". Gentle, never
+     sad or harsh (CLAUDE.md 6b). Same body as mascot_happy. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+    <!-- z z -->
+    <path
+        android:pathData="M90,8 L102,8 L90,20 L102,20"
+        android:strokeColor="@color/mascot_spark"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="3.5" />
+    <path
+        android:pathData="M104,26 L112,26 L104,34 L112,34"
+        android:strokeColor="@color/mascot_spark"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="3" />
+    <group
+        android:pivotX="60"
+        android:pivotY="110"
+        android:rotation="-8">
+        <!-- Arms resting. -->
+        <path
+            android:pathData="M31,74 Q24,82 30,90"
+            android:strokeColor="@color/mascot_line"
+            android:strokeLineCap="round"
+            android:strokeWidth="4" />
+        <path
+            android:pathData="M89,74 Q96,82 90,90"
+            android:strokeColor="@color/mascot_line"
+            android:strokeLineCap="round"
+            android:strokeWidth="4" />
+        <!-- Body. -->
+        <path
+            android:fillColor="@color/mascot_top"
+            android:pathData="M30,62 L30,36 A30,30 0 0 1 90,36 L90,62 Z" />
+        <path
+            android:fillColor="@color/mascot_bottom"
+            android:pathData="M30,62 L90,62 L90,84 A30,30 0 0 1 30,84 Z" />
+        <path
+            android:pathData="M80,70 L80,84"
+            android:strokeAlpha="0.6"
+            android:strokeColor="@color/mascot_top"
+            android:strokeLineCap="round"
+            android:strokeWidth="4" />
+        <path
+            android:pathData="M30,62 L90,62"
+            android:strokeColor="@color/mascot_line"
+            android:strokeWidth="3" />
+        <path
+            android:pathData="M30,36 A30,30 0 0 1 90,36 L90,84 A30,30 0 0 1 30,84 Z"
+            android:strokeColor="@color/mascot_line"
+            android:strokeLineJoin="round"
+            android:strokeWidth="4" />
+        <!-- Face: closed eyes, cheeks, small round mouth. -->
+        <path
+            android:fillColor="@color/mascot_cheek"
+            android:pathData="M38,46 a5,4 0 1 0 10,0 a5,4 0 1 0 -10,0 Z M72,46 a5,4 0 1 0 10,0 a5,4 0 1 0 -10,0 Z" />
+        <path
+            android:pathData="M44,35 Q49.5,40 55,35 M65,35 Q70.5,40 76,35"
+            android:strokeColor="@color/mascot_line"
+            android:strokeLineCap="round"
+            android:strokeWidth="3.5" />
+        <path
+            android:fillColor="@color/mascot_line"
+            android:pathData="M57,49 a3,3 0 1 0 6,0 a3,3 0 1 0 -6,0 Z" />
+    </group>
+</vector>

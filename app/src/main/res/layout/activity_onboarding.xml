@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The root takes the system bar insets as padding (edge-to-edge). The PIN step uses the PIN
+     sheet's own keypad, so no system keyboard opens on this screen. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_header_full"
+    tools:ignore="UselessParent">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/column"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- The hospital's logo on a white rounded tile (batch 6, R4). -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/logoTile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/logo_tile"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="2dp">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="@dimen/onboarding_logo_size"
+                    android:layout_height="@dimen/onboarding_logo_size"
+                    android:layout_margin="12dp"
+                    android:contentDescription="@string/hospital_logo_desc"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/hospital_logo" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- The full hospital name in Arabic and in English (no language is chosen yet here). -->
+            <TextView
+                android:id="@+id/appNameArabic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:textColor="@color/on_gradient"
+                android:textDirection="rtl"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:text="@string/hospital_name" />
+
+            <TextView
+                android:id="@+id/appNameEnglish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:textColor="@color/on_gradient"
+                android:textDirection="ltr"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="@string/hospital_name" />
+
+            <!-- Step 1: language -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/languageCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:visibility="gone"
+                app:cardCornerRadius="28dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/onboarding_language_title"
+                        android:textAppearance="?attr/textAppearanceTitleLarge" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/arabicButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:minHeight="64dp"
+                        android:text="@string/language_arabic"
+                        android:textSize="22sp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/englishButton"
+                        style="@style/Widget.PillPals.Button.Outlined"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:minHeight="64dp"
+                        android:text="@string/language_english"
+                        android:textSize="22sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Step 2: parent PIN -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/pinCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:visibility="gone"
+                app:cardCornerRadius="28dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pin_create_title"
+                        android:textAppearance="?attr/textAppearanceTitleLarge" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/pin_create_message"
+                        android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+                    <!-- Opens the PIN sheet (its own keypad: no system keyboard on this screen). -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/createPinButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:minHeight="56dp"
+                        android:text="@string/pin_create_title"
+                        app:icon="@drawable/ic_lock" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

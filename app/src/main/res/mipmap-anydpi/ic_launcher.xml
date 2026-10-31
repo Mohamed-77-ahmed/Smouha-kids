@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The Koko rooster (batch 6, D36): the picture from koko.jpg in the 66dp safe zone over a gradient of
+     its own sky blue. No monochrome layer: a clean silhouette cannot be derived from the picture, so
+     themed-icon launchers show this full-color icon. -->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MonochromeLauncherIcon">
+    <background android:drawable="@drawable/ic_launcher_koko_background" />
+    <foreground android:drawable="@drawable/ic_launcher_koko" />
+</adaptive-icon>

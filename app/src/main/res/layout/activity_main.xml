@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_header"
+        app:elevation="0dp">
+
+        <!-- Scrolls away so the list keeps room in landscape and with large fonts. -->
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="8dp"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- The hospital's logo on a white rounded tile instead of the app's name (batch 6, R5).
+                     A fixed dp size, so a large font never pushes it under the settings button; the
+                     heading for screen readers names the app and the logo. -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/headerLogoTile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="2dp"
+                    app:cardBackgroundColor="@color/logo_tile"
+                    app:cardCornerRadius="18dp"
+                    app:cardElevation="1dp">
+
+                    <ImageView
+                        android:id="@+id/headerLogo"
+                        android:layout_width="@dimen/header_logo_size"
+                        android:layout_height="@dimen/header_logo_size"
+                        android:layout_margin="4dp"
+                        android:accessibilityHeading="true"
+                        android:contentDescription="@string/home_logo_desc"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/hospital_logo" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/settingsButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/settings_title"
+                    android:src="@drawable/ic_settings"
+                    app:tint="@color/on_gradient" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/todaySummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:alpha="0.95"
+                android:textColor="@color/on_gradient"
+                android:textDirection="locale"
+                android:textSize="16sp"
+                tools:text="Today: 1 of 2 pills taken" />
+
+            <LinearLayout
+                android:id="@+id/statsRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <LinearLayout style="@style/StatBox">
+
+                    <TextView
+                        android:id="@+id/pointsValue"
+                        style="@style/StatValue"
+                        tools:text="120" />
+
+                    <TextView
+                        android:id="@+id/pointsLabel"
+                        style="@style/StatLabel"
+                        tools:text="points" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="0dp" />
+
+                <LinearLayout style="@style/StatBox">
+
+                    <TextView
+                        android:id="@+id/streakValue"
+                        style="@style/StatValue"
+                        tools:text="4" />
+
+                    <TextView
+                        android:id="@+id/streakLabel"
+                        style="@style/StatLabel"
+                        tools:text="days in a row" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="0dp" />
+
+                <LinearLayout style="@style/StatBox">
+
+                    <TextView
+                        android:id="@+id/levelValue"
+                        style="@style/StatValue"
+                        tools:text="2" />
+
+                    <TextView
+                        android:id="@+id/levelLabel"
+                        style="@style/StatLabel"
+                        android:text="@string/level_label" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/levelProgress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:visibility="gone"
+                app:indicatorColor="@color/progress_on_gradient"
+                app:trackColor="@color/glass"
+                app:trackCornerRadius="6dp"
+                app:trackThickness="10dp" />
+
+            <TextView
+                android:id="@+id/levelHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:alpha="0.9"
+                android:textColor="@color/on_gradient"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:text="60 points to level 3" />
+
+            <TextView
+                android:id="@+id/statusHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_glass"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="10dp"
+                android:textColor="@color/on_gradient"
+                android:textDirection="locale"
+                android:textSize="14sp"
+                android:visibility="gone"
+                tools:text="Perfect day!" />
+        </LinearLayout>
+
+        <!-- Stays pinned: the patient filter is always reachable. Chips wrap onto more lines. -->
+        <FrameLayout
+            android:id="@+id/chipsScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="12dp"
+            android:paddingBottom="8dp">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/filterChips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:selectionRequired="true"
+                app:singleLine="false"
+                app:singleSelection="true" />
+        </FrameLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"
+            app:cardBackgroundColor="?attr/colorErrorContainer"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/bannerText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="?attr/colorOnErrorContainer"
+                    android:textDirection="locale"
+                    tools:text="Notifications are off, reminders will not show." />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/bannerAction"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:minHeight="48dp"
+                    tools:text="Fix" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingHorizontal="12dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="112dp" />
+
+            <!-- Scrolls on short screens and large fonts; the bottom padding keeps the text clear of
+                 the "Add medicine" button, like the list. -->
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/emptyState"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="32dp"
+                    android:paddingTop="24dp"
+                    android:paddingBottom="112dp"
+                    tools:ignore="UseCompoundDrawables">
+                    <!-- The mascot is its own view: it has an idle motion (Motion.idle). -->
+
+                    <ImageView
+                        android:id="@+id/emptyMascot"
+                        android:layout_width="@dimen/mascot_size"
+                        android:layout_height="@dimen/mascot_size"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/mascot_happy" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center"
+                        android:text="@string/empty_state"
+                        android:textAppearance="?attr/textAppearanceBodyLarge"
+                        android:textColor="?attr/colorOnSurfaceVariant" />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Shown behind the status bar once the header starts scrolling (height = status bar). -->
+    <View
+        android:id="@+id/statusScrim"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="top"
+        android:alpha="0"
+        android:background="@drawable/bg_status_scrim"
+        android:elevation="8dp" />
+
+    <!-- The FAB cannot take a custom background, so the gradient sits on this wrapper behind it. -->
+    <FrameLayout
+        android:id="@+id/addButtonFrame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_fab"
+        android:elevation="6dp">
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stateListAnimator="@null"
+            android:text="@string/add_medicine"
+            android:textColor="@color/on_gradient"
+            app:backgroundTint="@android:color/transparent"
+            app:elevation="0dp"
+            app:icon="@drawable/ic_add"
+            app:iconTint="@color/on_gradient"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.PillPals.Circle" />
+    </FrameLayout>
+
+    <include
+        android:id="@+id/celebration"
+        layout="@layout/view_celebration" />
+
+    <!-- The course-complete screen of a dated course's final dose, after the reward (batch 6, R6). -->
+    <include
+        android:id="@+id/courseEnd"
+        layout="@layout/view_course_end" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
