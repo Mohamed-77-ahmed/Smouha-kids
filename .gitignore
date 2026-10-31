@@ -63,3 +63,6 @@ kh.env/
 /*.mp4
 /*.mpeg
 /*.mp3
+/docs
+/notebooklm
+/claude.md
